@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orinoco - Accueil</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="flex justify-between items-center rounded-lg w-full bg-oniPink py-2 px-6">
+          <a href="/"><img class="h-20 bg-oniPink" src=".back-end/images/logo_orinoco.png" alt="Orinico"></a>
+          <nav class="flex">
+            <ul class="list-none font-semibold">
+              <li>
+                <a class="px-4 py-4" href="./cart.html">Panier</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <!-- HEADER -->
+    
+        <!-- PRODUCT CONTAINER & LOADING BOXES -->
+        <ul id="productsList" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4">
+          <div class="bg-oniPink animate-pulse h-80"></div>
+          <div class="bg-oniPink animate-pulse h-80"></div>
+          <div class="bg-oniPink animate-pulse h-80"></div>
+          <div class="bg-oniPink animate-pulse h-80"></div>
+          <div class="bg-oniPink animate-pulse h-80"></div>
+          <div class="bg-oniPink animate-pulse h-80"></div>
+        </ul>
+        <!-- PRODUCT CONTAINER & LOADING BOXES -->
+      </div>
+    
+      <!-- PRODUCT TEMPLATE -->
+      <template id="product">
+        <li class="list-none bg-oniPink rounded-md p-4 transition duration-200 transform hover:scale-102">
+          <a id="productLink" href="">
+            <figure>
+              <img id="productImage" class="rounded h-64 w-full object-cover" src="" alt="">
+              <figcaption class="pt-4">
+                <div class="flex items-center mb-2">
+                  <h2 id="productName" class="font-bold "></h2>
+                  <div class="flex-grow"></div>
+                  <div class="flex items-center mr-4">
+                    <img class="h-5" src="./back-end/images/vcam_1.jpg" alt="">
+                    <img class="h-5" src="./back-end/images/vcam_2.jpg" alt="">
+                    <img class="h-5" src="./back-end/images/vcam_3.jpg" alt="">
+                    <img class="h-5" src="./back-end/images/vcam_4.jpg" alt="">
+                    <img class="h-5" src="./back-end/images/vcam_5.jpg" alt="">
+                  </div>
+                  <span id="productPrice" class="text-sm font-bold bg-white px-2 py-1 rounded"></span>
+                </div>
+                <p id="productDescription" class="text-black text-opacity-80 text-sm text-justify"></p>
+              </figcaption>
+            </figure>
+          </a>
+        </li>
+      </template>
+      <!-- PRODUCT TEMPLATE -->
+    </body>
+    </html>
