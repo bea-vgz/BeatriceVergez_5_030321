@@ -1,27 +1,54 @@
 body {
     margin:0;
+    width: 100%;
 }
 /* Éléments typographiques */
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;
   }
   
-  h1 {
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.6rem;
-  }
+}
   
-  h2 {
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.3rem;
-  }
+}
   
-  h3 {
+h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 1.1rem;
-  }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f3e9f1;
+    padding:2rem;
+    border-radius: 1rem;
+}
+
+.logo_orinoco {
+    max-width: 100%;
+    width:45%;
+}
+
+.title_container {
+      text-align: center;
+}
+
+.container_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer {
+    background-color: #f3e9f1;
+    padding: 2rem;
+    border-radius: 1rem;
+}
