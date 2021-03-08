@@ -1,63 +1,206 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orinoco - Accueil</title>
-  <link href="./style.css" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Orinoco - Caméras Vintages"/>
+    <meta name="description" content="Orinoco, bien plus qu'un site e-commerce ! Vente de caméras vintages de qualité en ligne."/>
+    
+    <link rel="shortcut icon" type="image/png" href="./img/favicon_orinoco.jpg">
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="styleheet"/>
+
+    <!-- FONTAWESOME/PICTOS -->
+    <script src="https://kit.fontawesome.com/356b4a0b38.js" crossorigin="anonymous"></script>
+
+    <title>Orinoco - Caméras Vintages</title>
+
+  </head>
+  <body>
+
+    <!-- PRINCIPAL CONTAINER -->
     <div class="container">
-        <!-- HEADER -->
-        <header class="flex justify-between items-center rounded-lg w-full bg-oniPink py-2 px-6">
-          <a href="/"><img class="h-20 bg-oniPink" src=".back-end/images/logo_orinoco.png" alt="Orinico"></a>
-          <nav class="flex">
-            <ul class="list-none font-semibold">
-              <li>
-                <a class="px-4 py-4" href="./cart.html">Panier</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <!-- HEADER -->
-    
-        <!-- PRODUCT CONTAINER & LOADING BOXES -->
-        <ul id="productsList" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-4">
-          <div class="bg-oniPink animate-pulse h-80"></div>
-          <div class="bg-oniPink animate-pulse h-80"></div>
-          <div class="bg-oniPink animate-pulse h-80"></div>
-          <div class="bg-oniPink animate-pulse h-80"></div>
-          <div class="bg-oniPink animate-pulse h-80"></div>
-          <div class="bg-oniPink animate-pulse h-80"></div>
-        </ul>
-        <!-- PRODUCT CONTAINER & LOADING BOXES -->
-      </div>
-    
-      <!-- PRODUCT TEMPLATE -->
-      <template id="product">
-        <li class="list-none bg-oniPink rounded-md p-4 transition duration-200 transform hover:scale-102">
-          <a id="productLink" href="">
-            <figure>
-              <img id="productImage" class="rounded h-64 w-full object-cover" src="" alt="">
-              <figcaption class="pt-4">
-                <div class="flex items-center mb-2">
-                  <h2 id="productName" class="font-bold "></h2>
-                  <div class="flex-grow"></div>
-                  <div class="flex items-center mr-4">
-                    <img class="h-5" src="./back-end/images/vcam_1.jpg" alt="">
-                    <img class="h-5" src="./back-end/images/vcam_2.jpg" alt="">
-                    <img class="h-5" src="./back-end/images/vcam_3.jpg" alt="">
-                    <img class="h-5" src="./back-end/images/vcam_4.jpg" alt="">
-                    <img class="h-5" src="./back-end/images/vcam_5.jpg" alt="">
-                  </div>
-                  <span id="productPrice" class="text-sm font-bold bg-white px-2 py-1 rounded"></span>
+
+      <!-- HEADER -->
+      <header class="flex col-8">
+        <a href="/"><img class="logo_orinoco" src="./img/logo_orinoco.png" alt="Orinico"></a>
+        <nav class="nav topbar__nav">
+          <a href="index.html" class="nav__link">Accueil</a>
+          <a href="panier.html" class="nav__link"><i class="fas fa-shopping-basket"></i>Panier</a>
+        </nav>
+      </header>
+      <!-- END HEADER -->
+
+      <!--INTRO-->
+      <section class="introduction">
+        <div class="title_container" class="text_container">
+          <h1>Nos Caméras Vintages</h1>
+        </div>
+      </section>
+      <!-- END INTRO-->
+
+      <main>
+        <!-- PRODUITS -->
+        <section class="row">
+          <article class="article_camera">
+            <a href="#" class="article"> 
+              <figure class="figure_article">
+                <img class="img_hebergement" src="img/vcam_1.jpg" alt="camera_1" />
+                <figcaption class="titre_cartouche"> 
+                  <h3> Zurss 50S </h3>
+                </figcaption>
+              </figure>
+              <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="etoiles_hebergement">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <p id="productDescription" class="text-black text-opacity-80 text-sm text-justify"></p>
-              </figcaption>
-            </figure>
-          </a>
-        </li>
-      </template>
-      <!-- PRODUCT TEMPLATE -->
-    </body>
-    </html>
+            </a>
+          </article>
+          <article class="article_camera">
+            <a href="#" class="article"> 
+              <figure class="figure_article">
+                <img class="img_hebergement" src="img/vcam_2.jpg" alt="camera_2" />
+                <figcaption class="titre_cartouche"> 
+                  <h3> Hirsch 400DTS </h3>
+                </figcaption>
+              </figure>
+              <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="etoiles_hebergement">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </a>
+          </article>
+          <article class="article_camera">
+            <a href="#" class="article"> 
+              <figure class="figure_article">
+                <img class="img_hebergement" src="img/vcam_3.jpg" alt="camera_3" />
+                <figcaption class="titre_cartouche"> 
+                  <h3> Franck JS 105 </h3>
+                </figcaption>
+              </figure>
+              <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="etoiles_hebergement">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </a>
+          </article>
+          <article class="article_camera">
+            <a href="#" class="article"> 
+              <figure class="figure_article">
+                <img class="img_hebergement" src="img/vcam_4.jpg" alt="camera_4" />
+                <figcaption class="titre_cartouche"> 
+                  <h3> Kuros TTS </h3>
+                </figcaption>
+              </figure>
+              <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="etoiles_hebergement">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </a>
+          </article>
+          <article class="article_camera">
+            <a href="#" class="article"> 
+              <figure class="figure_article">
+                <img class="img_hebergement" src="img/vcam_5.jpg" alt="camera_5" />
+                <figcaption class="titre_cartouche"> 
+                  <h3> Katatone </h3>
+                </figcaption>
+              </figure>
+              <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="etoiles_hebergement">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+            </a>
+          </article>
+
+            </section>
+        <!-- END PRODUITS -->
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
+        <div class="container bloc-sm">
+          <div class="row">
+            <div class="col-sm-12">
+              <h3> À propos </h3>
+                <ul>
+                  <li><a href="#">Fonctionnement du site</a></li>
+                  <li><a href="#">Conditions générales de vente</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+              <h3> Nos produits </h3>
+                <ul>
+                  <li><a href="#">Charte qualité</a></li>
+                  <li><a href="#">Soumettre votre objet</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+              <h3> Assistance </h3>
+                <ul>
+                  <li><a href="#">Centre d'aide</a></li>
+                  <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+              <h3 class="footer_title_white">Retrouvez-nous sur les Réseaux Sociaux !</h3>
+                <div class="row row-no-gutters social">
+                  <div class="col-sm-3 col-xs-3">
+                    <div class="text-center">
+                      <a href="https://twitter.com/" target="_blank" rel="noreferrer" title="Twitter">
+                        <i aria-hidden="true" class="fa fa-twitter icon-md"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-3">
+                    <div class="text-center">
+                      <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" title="Facebook">
+                        <i aria-hidden="true" class="fa fa-facebook icon-md"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-3">
+                    <div class="text-center">
+                      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" title="Instagram">
+                        <i aria-hidden="true" class="fa fa-instagram icon-md"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END FOOTER -->
+
+    </div>
+    <!-- END PRINCIPAL CONTAINER -->
+
+  </body>
+</html>
