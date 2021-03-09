@@ -7,32 +7,35 @@ p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
   }
-h1 {
+h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+a {
+    color:black;
+    text-decoration: none;
 }
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #f3e9f1;
-    padding:2rem;
+    padding:1rem;
     border-radius: 1rem;
+}
+.nav {
+    padding-right: 1rem;
+}
+.nav_picto {
+    padding-right: 1rem;
 }
 .logo_orinoco {
     max-width: 100%;
-    width:45%;
+    width:40%;
 }
 .title_container {
       text-align: center;
+      padding: 3rem;
 }
 .container_footer {
     display: flex;
@@ -45,15 +48,13 @@ h3 {
     border-radius: 1rem;
 }
 /* Articles produits */
-.container_produits {
-	background-color: #f3e9f1;
+.container {
 	width: 100%;
 	border-radius: 1.25rem;
 }
 .article_camera {
 	background-color: #FFFFFF;
-	padding: 0.4rem;
-	border-radius: 1.3rem;
+	border-radius: 1rem;
 	box-shadow: 0 0 16px #0000002e;
 	cursor: pointer;
 	margin-bottom: 2rem;
@@ -64,10 +65,13 @@ h3 {
 .img_article { 
     display: block;
 	max-height: 100%;
-	height: 20rem;
+	height: 18rem;
 	object-fit: cover;
 	object-position: center;
 	max-width: 100%;
 	width: 100%;
-	border-radius: 1rem;
+	border-radius: 0.7rem 0.7rem 0rem 0rem;
+}
+.description_cartouche {
+    padding: 1.2rem;
 }
