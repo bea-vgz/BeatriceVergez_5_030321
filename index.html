@@ -12,11 +12,6 @@
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- OPTIONAL JAVASCRIPT -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet"/>
@@ -38,7 +33,7 @@
       <header class="header col-8">
         <a href="index.html"><img class="logo_orinoco" src="./img/logo_orinoco.png" alt="Orinico"></a>
         <nav class="nav topbar__nav">
-          <a href="index.html" class="nav__link">Accueil</a>
+          <a href="index.html" class="nav__link"><i class="fas fa-home"></i>Accueil</a>
           <a href="panier.html" class="nav__link"><i class="fas fa-shopping-basket"></i>Panier</a>
         </nav>
       </header>
@@ -55,104 +50,115 @@
 
       <main>
         <!-- PRODUITS -->
-        <section class="row">
-          <div class="col">
-            <article class="article_camera">
-              <a href="produits.html" class="article"> 
-                <figure class="figure_article">
-                  <img class="img_hebergement" src="img/vcam_1.jpg" alt="camera_1" />
-                  <figcaption class="titre_cartouche"> 
-                    <h3> Zurss 50S </h3>
-                  </figcaption>
-                </figure>
-                <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div class="etoiles_hebergement">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-              </a>
-            </article>
-            <article class="article_camera">
-              <a href="produits.html" class="article"> 
-                <figure class="figure_article">
-                  <img class="img_hebergement" src="img/vcam_2.jpg" alt="camera_2" />
-                  <figcaption class="titre_cartouche"> 
-                    <h3> Hirsch 400DTS </h3>
-                  </figcaption>
-                </figure>
-                <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div class="etoiles_hebergement">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-              </a>
-            </article>
-          </div>
-          <div class="col"></div>
-            <article class="article_camera">
-              <a href="produits.html" class="article"> 
-                <figure class="figure_article">
-                  <img class="img_hebergement" src="img/vcam_3.jpg" alt="camera_3" />
-                  <figcaption class="titre_cartouche"> 
-                    <h3> Franck JS 105 </h3>
-                  </figcaption>
-                </figure>
-                <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div class="etoiles_hebergement">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-              </a>
-            </article>
-            <article class="article_camera">
-              <a href="produits.html" class="article"> 
-                <figure class="figure_article">
-                  <img class="img_hebergement" src="img/vcam_4.jpg" alt="camera_4" />
-                  <figcaption class="titre_cartouche"> 
-                    <h3> Kuros TTS </h3>
-                  </figcaption>
-                </figure>
-                <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div class="etoiles_hebergement">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-              </a>
-            </article>
-          </div>
-          <div class="col"></div>
-            <article class="article_camera">
-              <a href="produits.html" class="article"> 
-                <figure class="figure_article">
-                  <img class="img_hebergement" src="img/vcam_5.jpg" alt="camera_5" />
-                  <figcaption class="titre_cartouche"> 
-                    <h3> Katatone </h3>
-                  </figcaption>
-                </figure>
-                <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <div class="etoiles_hebergement">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-              </a>
-            </article>
+        <section class="articles">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <article class="article_camera">
+                  <a href="produits.html" class="article"> 
+                    <figure class="figure_article">
+                      <img class="img_article" src="img/vcam_1.jpg" alt="camera_1" />
+                      <figcaption class="titre_cartouche"> 
+                        <h3> Zurss 50S </h3>
+                      </figcaption>
+                    </figure>
+                    <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <div class="etoiles_hebergement">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                  </a>
+                </article>
+              </div>
+              <div class="col">
+                <article class="article_camera">
+                  <a href="produits.html" class="article"> 
+                    <figure class="figure_article">
+                      <img class="img_article" src="img/vcam_2.jpg" alt="camera_2" />
+                      <figcaption class="titre_cartouche"> 
+                        <h3> Zurss 50S </h3>
+                      </figcaption>
+                    </figure>
+                    <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <div class="etoiles_hebergement">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <article class="article_camera">
+                  <a href="produits.html" class="article"> 
+                    <figure class="figure_article">
+                      <img class="img_article" src="img/vcam_3.jpg" alt="camera_3" />
+                      <figcaption class="titre_cartouche"> 
+                        <h3> Zurss 50S </h3>
+                      </figcaption>
+                    </figure>
+                    <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <div class="etoiles_hebergement">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                  </a>
+                </article>
+              </div>
+              <div class="col">
+                <article class="article_camera">
+                  <a href="produits.html" class="article"> 
+                    <figure class="figure_article">
+                      <img class="img_article" src="img/vcam_4.jpg" alt="camera_4" />
+                      <figcaption class="titre_cartouche"> 
+                        <h3> Zurss 50S </h3>
+                      </figcaption>
+                    </figure>
+                    <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <div class="etoiles_hebergement">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                  </a>
+                </article>
+              </div>
+              <div class="col">
+                <article class="article_camera">
+                  <a href="produits.html" class="article"> 
+                    <figure class="figure_article">
+                      <img class="img_article" src="img/vcam_5.jpg" alt="camera_5" />
+                      <figcaption class="titre_cartouche"> 
+                        <h3> Zurss 50S </h3>
+                      </figcaption>
+                    </figure>
+                    <p class="text_cartouche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <div class="etoiles_hebergement">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                  </a>
+                </article>
+              </div>
+            </div>
           </div>
         </section>
+            
         <!-- END PRODUITS -->
       </main>
 
