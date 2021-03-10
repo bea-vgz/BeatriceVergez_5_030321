@@ -1,4 +1,4 @@
-let container = document.getElementById("Container_camera");
+let container = document.getElementById("Container_Camera");
 
 /* API - Récupération FETCH */
 fetch("http://localhost:3000/api/cameras")
@@ -36,22 +36,3 @@ const display = camera => {
         </div>
     </div>`
 };
-
-class Cameras_Vintages {
-    constructor({
-        name,
-        imageUrl,
-        price,
-        _id,
-        description,
-        lenses,
-    }) {
-        this.name = name;
-        this.imageUrl = imageUrl;
-        this.price = price;
-        this.id = _id;
-        this.description = description;
-        this.lenses = lenses;
-    }
-};
-
