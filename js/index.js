@@ -1,3 +1,4 @@
+/* PLACEMENT DANS MON CODE HTML */
 let container = document.getElementById("Container_Camera");
 
 /* API - Récupération FETCH */
@@ -16,8 +17,8 @@ fetch("http://localhost:3000/api/cameras")
     });
 
 /* CODE HTML ARTICLES CAMERAS */
-const display = camera => {
-    container.innerHTML += `
+function display(camera) {
+    Container_Camera.innerHTML += `
     <div class="row Article">
         <div class="col">
             <article class="ArticleProduct">
@@ -34,5 +35,5 @@ const display = camera => {
                 </a>
             </article>
         </div>
-    </div>`
-};
+    </div>`;
+}
