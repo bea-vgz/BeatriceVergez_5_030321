@@ -1,11 +1,11 @@
 /* RECUPERATION URL - ID DU PRODUIT*/
-let params = (new URL(document.location)).searchParams.get('id');
+let Id = (new URL(document.location)).searchId.get('Id');
 
 /* PLACEMENT DANS MON CODE HTML */
 let container = document.getElementById("Container_Product");
 
 /* API - Récupération FETCH */
-fetch("http://localhost:3000/api/cameras" + id)
+fetch("http://localhost:3000/api/cameras/" + Id)
     .then(response => response.json())  
     .then(function (product) { 
         let camera = new Cameras_Vintages (product)
