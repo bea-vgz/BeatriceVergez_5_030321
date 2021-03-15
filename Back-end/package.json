@@ -1,14 +1,10 @@
 {
   "name": "orinoco-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projet_5_Orinoco",
   "main": "server.js",
   "scripts": {
     "sass": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bea-vgz/BeatriceVergez_5_030321.git"
   },
   "author": "bea-vgz",
   "license": "ISC",

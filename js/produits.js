@@ -64,8 +64,3 @@ const display = camera => {
       addProductPanier(camera)
   });
 };
-
-/* AJOUT AU PANIER */ 
-function addProductPanier(camera) {
-  camera.quantity = parseInt(document.getElementById('quantity').value);
-}
