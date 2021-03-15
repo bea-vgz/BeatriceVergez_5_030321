@@ -22,15 +22,15 @@ function display(camera) {
     <div class="row Article">
         <div class="col">
             <article class="ArticleProduct">
-                <a href="produits.html" class="article">
+                <a href="produits.html?id=${camera.id}" class="article">
                     <figure class="FigureProduct">
                         <img src=${camera.imageUrl} alt="photos produits" class="Image_article" />
                     </figure>
                     <div class="DescriptionProduct">
                         <h2>${camera.name}</h2>
                         <p class="PriceProduct">${camera.price / 100}€</p>
-                        <p>${camera.description}</p>
-                        <a href="produit.html?id=${camera.id}"> Voir la fiche produit </a>
+                        <p class="ProductDescription">${camera.description}</p>
+                        <a href="produits.html?id=${camera.id}"> Voir la fiche produit </a>
                     </div>
                 </a>
             </article>
