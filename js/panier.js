@@ -16,7 +16,7 @@ function priceTotalPanier(camera){
     localStorage.setItem('prixTotal', JSON.stringify(prixTotal));
 };
 
-/* BOUCLE SUR LE PANIER */
+/* LE PANIER */
 camera_vintage.forEach((camera, i) => {
     Container_Panier.innerHTML += `
       <tr>
@@ -25,10 +25,10 @@ camera_vintage.forEach((camera, i) => {
           <td> ${camera.lenses}</td>
           <td>${camera.quantity}</td>
           <td>${priceTotalPanier = camera.quantity * camera.price / 100} €</td>
-          <td><a href="#" class="SupprProduct" data-id="${i}"> <i class="fas fa-trash-alt"></i></a></td>
+          <td><a href="#" class="SupprProduct" data-id="${i}"> <i class="fas fa-trash-alt corbeille"></i></a></td>
       </tr>
     `;
-    priceTotalPanier(camera)
 });
 
 /* SUPPRESSION CAMERA DU PANIER */
+
