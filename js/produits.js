@@ -2,9 +2,9 @@
 let params = (new URL(document.location)).searchParams;
 const id = params.get("id");
 
-/* LOCAL STORAGE */
-const addLocalStorage = panier => {
-localStorage.setItem('panier', JSON.stringify(panier));
+/* RÉCUPÉRATION DU LOCAL STORAGE */
+function addLocalStorage(panier) {
+  localStorage.setItem('panier', JSON.stringify(panier));
 }
 
 /* PLACEMENT DANS MON CODE HTML */
@@ -32,7 +32,7 @@ const display = camera => {
         <img src=${camera.imageUrl} alt="photos produits" class="ImageProduct"/>
         <div class="DescriptionProduct">
           <h2>${camera.name}</h2>
-          <p class="PriceProduct"> Prix unitaire : ${camera.price / 100}€</p>
+          <p class="PriceProduct" > Prix unitaire : ${camera.price / 100}€</p>
           <p class="ProductDescription">${camera.description}</p>
           <div class="Options">
             <h4 class="OptionsObjectif"> Option </h4>
@@ -47,19 +47,40 @@ const display = camera => {
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
-          </div>      
+          </div> 
           <a href ="panier.html"><button type ="submit" value="submit" id="panier">Ajouter au panier</button></a>
         </div>
       </article>
     </div>
   </div> `;
 
-/* PARTIE OPTION */
+/* PARTIE OPTION LENTILLES */
   for (let lenses of camera.lenses){
     document.getElementById('option_lentilles').innerHTML+=
     `<option>${lenses}</option>`
   }
-/* PARTIE CLICK */
+
+/* AJOUT AU PANIER */
+function addProductPanier(camera) {
+  camera.quantity = parseInt(document.getElementById('quantity').value);
+  /* RECUPERATION PANIER LS */
+  let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
+  /* SI PRODUIT EXISTE DANS PANIER */
+  let cameraAlreadyInPanier = false;
+  for (let i = 0; i < panier.length; i++) {
+    let product = panier[i];
+    if (product.id === camera.id) {
+      cameraAlreadyInPanier = i;
+    }
+  };
+  if (cameraAlreadyInPanier = false) {
+    panier[cameraAlreadyInPanier].quantity = parseInt(panier[cameraAlreadyInPanier].quantity) + camera.quantity;
+  } else {
+    panier.push(camera);
+  };
+  addLocalStorage(panier);
+}
+/* PARTIE CLICK AJOUT PANIER */
     document.getElementById('panier').addEventListener('click', function () {
       addProductPanier(camera)
   });

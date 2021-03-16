@@ -44,6 +44,13 @@ li a {
 .nav_picto {
     padding-right: 0.5rem;
 }
+.nav a {
+    color: #8855F1;
+}
+.nav a:hover {
+    text-decoration: none;
+    color: #E97400;
+}
 .logo_orinoco {
     max-width: 100%;
     width:35%;
@@ -111,6 +118,13 @@ li a {
 .DescriptionProduct {
     padding: 2.5rem;
 }
+.DescriptionProduct a {
+    color: #8855F1;
+}
+.DescriptionProduct a:hover {
+    text-decoration: none;
+    color: #E97400;
+}
 /* Fiche produits */
 .ImageProduct {
     max-height: 100%;
@@ -131,7 +145,7 @@ li a {
     margin-right : 1rem;
 }
 #panier {
-    background-color: rgb(71, 71, 71);
+    background-color: #8855F1;
     color: white;
     padding-top : 0.5rem;
     padding-bottom : 0.5rem;
@@ -144,7 +158,6 @@ li a {
 }
 #panier:hover {
     background-color: #E97400;
-    color: black ;
 }
 .Options {
     margin-top: 2rem;
