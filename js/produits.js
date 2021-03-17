@@ -46,6 +46,7 @@ const display = camera => {
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
+              <option value="4">4</option>
             </select>
           </div> 
           <a href ="panier.html"><button type ="submit" value="submit" id="panier">Ajouter au panier</button></a>
@@ -54,34 +55,34 @@ const display = camera => {
     </div>
   </div> `;
 
-/* PARTIE OPTION LENTILLES */
+/* PARTIE "for" OPTION LENTILLES */
   for (let lenses of camera.lenses){
     document.getElementById('option_lentilles').innerHTML+=
     `<option>${lenses}</option>`
   }
 
-/* AJOUT AU PANIER */
+/* FUNCTION AJOUT AU PANIER */
 function addProductPanier(camera) {
-  camera.quantity = parseInt(document.getElementById('quantity').value);
-  /* RECUPERATION PANIER LS */
-  let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
-  /* SI PRODUIT EXISTE DANS PANIER */
-  let cameraAlreadyInPanier = false;
-  for (let i = 0; i < panier.length; i++) {
-    let product = panier[i];
-    if (product.id === camera.id) {
-      cameraAlreadyInPanier = i;
-    }
-  };
-  if (cameraAlreadyInPanier = false) {
-    panier[cameraAlreadyInPanier].quantity = parseInt(panier[cameraAlreadyInPanier].quantity) + camera.quantity;
-  } else {
-    panier.push(camera);
-  };
-  addLocalStorage(panier);
-}
-/* PARTIE CLICK AJOUT PANIER */
-    document.getElementById('panier').addEventListener('click', function () {
-      addProductPanier(camera)
-  });
+    camera.quantity = parseInt(document.getElementById('quantity').value);
+    /* RECUPERATION PANIER LS */
+    let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
+    /* BOUCLE SI PRODUIT EXISTE DANS PANIER */
+    let cameraAlreadyInPanier = false;
+    for (let i = 0; i < panier.length; i++) {
+      let product = panier[i];
+      if (product.id === camera.id) {
+        cameraAlreadyInPanier = i;
+      }
+    };
+    if (false !== cameraAlreadyInPanier) {
+      panier[cameraAlreadyInPanier].quantity = parseInt(panier[cameraAlreadyInPanier].quantity) + camera.quantity;
+    } else {
+      panier.push(camera);
+    };
+    addLocalStorage(panier);
+  }
+  /* CLICK AJOUT PANIER */
+      document.getElementById('panier').addEventListener('click', function () {
+        addProductPanier(camera)
+    });
 };

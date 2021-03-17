@@ -6,11 +6,11 @@ let container = document.getElementById("Container_Panier");
 
 /* PRIX INITIAL DU PANIER AVANT AJOUT CAMERA */
 let prixPanier = 0;
-let addIdPanier = [];
+let panier = [];
 
-/* CALCUL PRIX TOTAL */
+/* FUNTION CALCUL PRIX TOTAL */
 function priceTotalPanier(camera){
-    prixPanier = camera.quantity * camera.price / 100;
+    prixPanier += camera.quantity * camera.price / 100;
     /* AFFICHE PRIX TOTAL DU PANIER */
     let prixTotal = document.getElementById('prixTotal').textContent = prixPanier + " € ";
     localStorage.setItem('prixTotal', JSON.stringify(prixTotal));
@@ -19,16 +19,33 @@ function priceTotalPanier(camera){
 /* LE PANIER */
 camera_vintage.forEach((camera, i) => {
     Container_Panier.innerHTML += `
-      <tr>
-          <td class="ImagePanier"><img src=${camera.imageUrl} alt="" /></td>
-          <td>${camera.name}</td>
-          <td> ${camera.lenses}</td>
-          <td>${camera.quantity}</td>
-          <td>${priceTotalPanier = camera.quantity * camera.price / 100} €</td>
-          <td><a href="#" class="SupprProduct" data-id="${i}"> <i class="fas fa-trash-alt corbeille"></i></a></td>
-      </tr>
+    <table class="table">
+        <tr class="Tableau">
+            <td><img class="ImagePanier" src=${camera.imageUrl} alt="" /></td>
+            <td><h5>${camera.name}</h5></td>
+            <td>${camera.lenses}</td>
+            <td>${camera.quantity}</td>
+            <td><strong>${priceTotalPanier = camera.quantity * camera.price / 100} €</strong></td>
+            <td><button class="SupprProduct fas fa-trash fa text-danger" data-id="${i}"></button></td>
+        </tr>
+    </table>
+    <button id="ConfirmCommande">Passer la commande</button>
     `;
 });
 
-/* SUPPRESSION CAMERA DU PANIER */
-
+/* FUNTION SUPPRESSION PRODUIT DU PANIER */
+function SupprProduct(id) {
+    let camera = camera_vintage[id];
+    /* INSTRUCTIONS IF/ELSE */
+    if (camera.quantity > 1) {
+      camera.quantity--;
+    } else {
+        camera_vintage.splice(id, 1);
+    }
+    localStorage.setItem('panier', JSON.stringify(camera_vintage));
+    window.location.reload();
+  }
+/* SUPRESSION D'1 PRODUIT */
+document.querySelectorAll(".SupprProduct").forEach(deleteButton => {
+  deleteButton.addEventListener('click', () => SupprProduct(deleteButton.dataset.id))
+});

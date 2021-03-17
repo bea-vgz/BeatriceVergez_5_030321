@@ -3,7 +3,7 @@ body {
     width: 100%;
 }
 /* Éléments typographiques */
-p {
+p, td {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: rgb(71, 71, 71);
@@ -14,7 +14,13 @@ h1, h2, h3 {
     color: #8855F1;
 }
 h4 {
+    font-family: 'Montserrat', sans-serif;
     color: rgb(71, 71, 71);
+}
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #8855F1;
 }
 i {
     color: rgb(71, 71, 71);
@@ -144,7 +150,7 @@ li a {
 .OptionsQuantity {
     margin-right : 1rem;
 }
-#panier {
+#panier, #ConfirmCommande {
     background-color: #8855F1;
     color: white;
     padding-top : 0.5rem;
@@ -156,11 +162,18 @@ li a {
     margin-top: 2rem;
     border: none;
 }
-#panier:hover {
+#panier:hover, #ConfirmCommande:hover {
     background-color: #E97400;
 }
 .Options {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+.ImagePanier {
+	height: 5rem;
+	object-fit: cover;
+	object-position: center;
+	width: 10rem;
+	border-radius: 1rem;
 }
 /* END Articles produits */
