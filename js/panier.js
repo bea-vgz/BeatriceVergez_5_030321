@@ -24,11 +24,10 @@ camera_vintage.forEach((camera, i) => {
             <td><h5>${camera.name}</h5></td>
             <td>${camera.lenses}</td>
             <td>${camera.quantity}</td>
-            <td><strong>${prixPanier = camera.quantity * camera.price / 100} €</strong></td>
+            <td><strong>${prixPanier += camera.quantity * camera.price / 100} €</strong></td>
             <td><button class="SupprProduct fas fa-trash fa text-danger" data-id="${i}"></button></td>
         </tr>
     </table>
-    <button id="ConfirmCommande">Passer la commande</button>
     `;
 });
 
