@@ -9,9 +9,8 @@ let prixPanier = 0;
 let panier = [];
 
 /* FUNTION CALCUL PRIX TOTAL */
-function priceTotalPanier(camera){
+function prixTotalPanier(camera){
     prixPanier += camera.quantity * camera.price / 100;
-    /* AFFICHE PRIX TOTAL DU PANIER */
     let prixTotal = document.getElementById('prixTotal').textContent = prixPanier + " € ";
     localStorage.setItem('prixTotal', JSON.stringify(prixTotal));
 };
@@ -25,7 +24,7 @@ camera_vintage.forEach((camera, i) => {
             <td><h5>${camera.name}</h5></td>
             <td>${camera.lenses}</td>
             <td>${camera.quantity}</td>
-            <td><strong>${priceTotalPanier = camera.quantity * camera.price / 100} €</strong></td>
+            <td><strong>${prixPanier = camera.quantity * camera.price / 100} €</strong></td>
             <td><button class="SupprProduct fas fa-trash fa text-danger" data-id="${i}"></button></td>
         </tr>
     </table>

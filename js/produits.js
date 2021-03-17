@@ -56,7 +56,7 @@ const display = camera => {
   </div> `;
 
 /* PARTIE "for" OPTION LENTILLES */
-  for (let lenses of camera.lenses){
+for (let lenses of camera.lenses){
     document.getElementById('option_lentilles').innerHTML+=
     `<option>${lenses}</option>`
   }
