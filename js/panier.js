@@ -6,13 +6,16 @@ let container = document.getElementById("Container_Panier");
 
 /* PRIX INITIAL DU PANIER AVANT AJOUT CAMERA */
 let prixPanier = 0;
-let panier = [];
+let prixTotalPanier = 0;
+let addIdPanier = [];
 
-/* FUNTION CALCUL PRIX TOTAL */
-function prixTotalPanier(camera){
-    prixPanier += camera.quantity * camera.price / 100;
-    let prixTotal = document.getElementById('prixTotal').textContent = prixPanier + " € ";
-    localStorage.setItem('prixTotal', JSON.stringify(prixTotal));
+/* FUNTION CALCUL PRIX TOTAL PANIER PRODUITS */
+function TOTAL_PANIER(camera){
+  prixPanier += camera.quantity * camera.price / 100;
+
+/* PRIX TOTAL PRODUITS */
+ let prixTotalPanier = document.getElementById('prixTotalPanier').textContent = prixPanier + " € ";
+  localStorage.setItem('prixTotalPanier', JSON.stringify(prixTotalPanier));
 };
 
 /* LE PANIER */
@@ -24,11 +27,12 @@ camera_vintage.forEach((camera, i) => {
             <td><h5>${camera.name}</h5></td>
             <td>${camera.lenses}</td>
             <td>${camera.quantity}</td>
-            <td><strong>${prixPanier += camera.quantity * camera.price / 100} €</strong></td>
+            <td><strong>${camera.quantity * camera.price / 100} €</strong></td>
             <td><button class="SupprProduct fas fa-trash fa text-danger" data-id="${i}"></button></td>
         </tr>
     </table>
     `;
+    TOTAL_PANIER(camera)
 });
 
 /* FUNTION SUPPRESSION PRODUIT DU PANIER */
@@ -45,5 +49,19 @@ function SupprProduct(id) {
   }
 /* SUPRESSION D'1 PRODUIT */
 document.querySelectorAll(".SupprProduct").forEach(deleteButton => {
-  deleteButton.addEventListener('click', () => SupprProduct(deleteButton.dataset.id))
+  deleteButton.addEventListener('click',() => SupprProduct(deleteButton.dataset.id))
 });
+
+/* SUPPRESSION - TOUT LE PANIER */
+let SupprPanier = document.getElementById('SupprPanier')
+SupprPanier.addEventListener('click', deletePanier);
+
+/* FONCTION SUPPRIME TOUT LE PANIER */
+function deletePanier() {
+  if (camera_vintage == null) {
+  } else {
+    container.remove();
+    localStorage.clear();
+    window.location.reload();
+  }
+};

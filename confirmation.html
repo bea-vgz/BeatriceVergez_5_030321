@@ -21,7 +21,7 @@
     <!-- FONTAWESOME/PICTOS -->
     <script src="https://kit.fontawesome.com/356b4a0b38.js" crossorigin="anonymous"></script>
 
-    <title>Orinoco - Mon panier</title>
+    <title>Orinoco - Confirmation</title>
 
   </head>
   <body>
@@ -42,35 +42,13 @@
       <!--INTRO-->
       <section class="introduction">
         <div class="title_container">
-          <h1>Votre panier</h1>
-          <p class="introduction_description">Voici un récapitulatif de votre commande. Vous pouvez encore la modifier avant la prochaine étape.</p>
+          <h1>Orinoco vous remercie !</h1>
         </div>
       </section>
       <!-- END INTRO-->
       <main>
-        <table id="Container_Panier">
-          <thead>
-            <tr>
-              <th class="srcimage">Photos</th>
-              <th>Nom</th>
-              <th>Lentilles</th>
-              <th>Quantité</th>
-              <th>Prix</th>
-              <th>Supprimer</th>
-            </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <th><strong>TOTAL</strong></th>
-              <td id="prixTotalPanier"></td>
-            </tr>
-          </tfoot>
-        </table>
-        <button id="SupprPanier" class="SupprPanier">Vider le Panier</button>
-        <a href ="formulaire.html"><button type ="submit" value="submit" id="ConfirmCommande">Passer la commande</button></a>
+        <section id="Container_confirmation">
+        </section>
       </main>
       <!-- FOOTER -->
       <footer class="footer">
@@ -138,7 +116,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     <script src="js/ajax.js"></script>
-    <script src="js/panier.js"></script>
+    <script src="js/confirmation.js"></script>
+    <script src="js/formulaire.js"></script>
     <script src="js/Cameras_Vintages.js"></script>
   </body>
 </html>

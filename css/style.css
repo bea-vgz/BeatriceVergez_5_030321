@@ -150,7 +150,7 @@ li a {
 .OptionsQuantity {
     margin-right : 1rem;
 }
-#panier, #ConfirmCommande {
+#panier, #ConfirmCommande, #SupprPanier, #Formulaire, #EnvoiDuFormulaire {
     background-color: #8855F1;
     color: white;
     padding-top : 0.5rem;
@@ -162,8 +162,14 @@ li a {
     margin-top: 2rem;
     border: none;
 }
-#panier:hover, #ConfirmCommande:hover {
+#panier:hover, #ConfirmCommande:hover, #SupprPanier:hover, #Formulaire:hover, #EnvoiDuFormulaire:hover {
     background-color: #E97400;
+}
+#ConfirmCommande, #SupprPanier, #Formulaire, #EnvoiDuFormulaire {
+    margin-bottom: 3rem;
+}
+#ConfirmCommande, #EnvoiDuFormulaire {
+    float: right;
 }
 .Options {
     margin-top: 2rem;
@@ -177,3 +183,66 @@ li a {
 	border-radius: 1rem;
 }
 /* END Articles produits */
+/* Champs formulaire */
+.form-style {
+    margin: 10px auto;
+    padding: 20px 12px 10px 20px;
+    width: 100%;
+}
+.form-style td {
+    padding: 1rem;
+    list-style: none;
+    margin: 2rem;
+}
+.form-style label {
+    margin: 1px;
+    padding: 0px;
+    font-weight: bold;
+}
+.form-style, .required {
+    color:#E97400;
+}
+.form-style input[type=text], 
+.form-style input[type=email],
+textarea {
+    border:1px solid #BEBEBE;
+    padding: 8px;
+    margin:2px;
+    font-size: 0.9rem;
+    width: 100%;
+    border-radius: 10px;
+}
+.error { 
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+/* Panier */
+.Container_Panier {
+    width: 100%;
+    height: 10rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.contact_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    align-items: center;
+}
+td, th {
+    vertical-align: middle;
+    border: 0.8px solid#8855F1;
+    border-style: dotted;
+    height: 6rem;
+} 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+.SupprProduct {
+    border-style: none;
+    background-color: white;
+}

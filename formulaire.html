@@ -21,7 +21,7 @@
     <!-- FONTAWESOME/PICTOS -->
     <script src="https://kit.fontawesome.com/356b4a0b38.js" crossorigin="anonymous"></script>
 
-    <title>Orinoco - Mon panier</title>
+    <title>Orinoco - Contact</title>
 
   </head>
   <body>
@@ -34,43 +34,76 @@
         <a href=javascript:history.go(-1)><img class="nav_arrow"><i class="fas fa-angle-left fa-2x"></i></a>
         <a href="index.html"><img class="logo_orinoco" src="./Back-end/images/logo_orinoco.png" alt="Orinico"></a>
         <nav class="nav">
-          <a href="index.html" class="nav_link"><i class="fas fa-home nav_picto"></i>Accueil</a>
+          <a href="panier.html" class="nav_link"><i class="fas fa-shopping-basket nav_picto"></i>Panier</a>
         </nav>
       </header>
       <!-- END HEADER -->
 
       <!--INTRO-->
       <section class="introduction">
-        <div class="title_container">
-          <h1>Votre panier</h1>
-          <p class="introduction_description">Voici un récapitulatif de votre commande. Vous pouvez encore la modifier avant la prochaine étape.</p>
+        <div class="title_container" class="text_container">
+          <h1>Vos coordonnées</h1>
+          <p class="introduction_description"> Merci de bien vouloir renseigner vos coordonnées pour finaliser votre commande.</p>
         </div>
       </section>
       <!-- END INTRO-->
       <main>
-        <table id="Container_Panier">
-          <thead>
-            <tr>
-              <th class="srcimage">Photos</th>
-              <th>Nom</th>
-              <th>Lentilles</th>
-              <th>Quantité</th>
-              <th>Prix</th>
-              <th>Supprimer</th>
+        <form action="" onsubmit="return validateForm()" method="POST" id="contact_form" class="col">
+          <table class="form-style">
+            <tr class="col">
+              <td>
+                <label for="civilité">Civilité<span class="required"> *</span></label><br/>
+                <input type="radio" id="Mr" name="drone" value="M.">
+                <span for="M.">M.</span>
+          
+                <input type="radio" id="Mme" name="drone" value="Mme">
+                <span for="Mme">Mme</span>
+              </td>
+              <td>
+                <label for="firstName">Nom<span class="required"> *</span></label><br/>
+                <input type="text" id="firstName" name="name" class="long" required="required" placeholder="Nom"/>
+                <span class="error" id="errorfirstName"></span>
+              </td>
+              <td>
+                <label for="lastName">Prénom<span class="required"> *</span></label><br/>
+                <input type="text" id="lastName" name="name" class="long" required="required" placeholder="Prénom"/>
+                <span class="error" id="errorlastName"></span>
+              </td>
+              <td>
+                <label for="mobile">Mobile<span class="required"> *</span></label><br/>
+                <input type="text" id="mobile" name="mobile" class="long" required="required" minlength="10" maxlength="10" placeholder="Mobile"/>
+                <span class="error" id="errormobile"></span>
+              </td>
             </tr>
-          </thead>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <th><strong>TOTAL</strong></th>
-              <td id="prixTotalPanier"></td>
+            <tr class="col">
+              <td>
+                <label for="email">E-mail<span class="required"> *</span></label><br/>
+                <input type="email" id="email" name="email" class="long" required="required" placeholder="Email"/>
+                <span class="error" id="erroremail"></span>
+              </td>
+              <td>
+                <label for="address">Adresse<span class="required"> *</span></label><br/>
+                <input type="text" id="address" name="adresse" class="long" required="required" placeholder="Adresse"/>
+                <span class="error" id="erroraddress"></span>
+              </td>
+              <td>
+                <label for="postal">Code postal<span class="required"> *</span></label><br/>
+                <input type="text" id="postal" name="postal" class="long" required="required" placeholder="Code postal"/>
+                <span class="error" id="errorpostal"></span>
+              </td>
+              <td>
+                <label for="city">Ville<span class="required"> *</span></label><br/>
+                <input type="text" id="city" name="city" class="long" required="required" placeholder="Ville"/>
+                <span class="error" id="errorcity"></span>
+              </td>
             </tr>
-          </tfoot>
-        </table>
-        <button id="SupprPanier" class="SupprPanier">Vider le Panier</button>
-        <a href ="formulaire.html"><button type ="submit" value="submit" id="ConfirmCommande">Passer la commande</button></a>
+          </table>
+            <div>
+              <p><span class="required"><strong>* </strong></span>Champs obligatoires</p>
+              <input id="EnvoiDuFormulaire" class="EnvoiDuFormulaire" type="submit" value="Envoyer">      
+              <input id="Formulaire" type="reset" value="Réinitialiser"> 
+            </div>
+        </form>
       </main>
       <!-- FOOTER -->
       <footer class="footer">
@@ -138,7 +171,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     <script src="js/ajax.js"></script>
-    <script src="js/panier.js"></script>
+    <script src="js/formulaire.js"></script>
+    <script src="js/confirmation.js"></script>
     <script src="js/Cameras_Vintages.js"></script>
   </body>
 </html>
