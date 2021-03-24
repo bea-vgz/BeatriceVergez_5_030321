@@ -46,6 +46,7 @@ function SupprProduct(id) {
     }
     localStorage.setItem('panier', JSON.stringify(camera_vintage));
     window.location.reload();
+    alert("Le produit vient d'être supprimer")
   }
 /* SUPRESSION D'1 PRODUIT */
 document.querySelectorAll(".SupprProduct").forEach(deleteButton => {
@@ -63,5 +64,7 @@ function deletePanier() {
     container.remove();
     localStorage.clear();
     window.location.reload();
+    alert("Votre panier est sur le point d'être supprimer")
+    document.location.href = 'index.html'
   }
 };

@@ -150,7 +150,7 @@ li a {
 .OptionsQuantity {
     margin-right : 1rem;
 }
-#panier, #ConfirmCommande, #SupprPanier, #Formulaire, #EnvoiDuFormulaire {
+#panier, #ConfirmCommande, #SupprPanier, #Formulaire, #SendFormulaire {
     background-color: #8855F1;
     color: white;
     padding-top : 0.5rem;
@@ -162,13 +162,13 @@ li a {
     margin-top: 2rem;
     border: none;
 }
-#panier:hover, #ConfirmCommande:hover, #SupprPanier:hover, #Formulaire:hover, #EnvoiDuFormulaire:hover {
+#panier:hover, #ConfirmCommande:hover, #SupprPanier:hover, #Formulaire:hover, #SendFormulaire:hover {
     background-color: #E97400;
 }
-#ConfirmCommande, #SupprPanier, #Formulaire, #EnvoiDuFormulaire {
+#ConfirmCommande, #SupprPanier, #Formulaire, #SendFormulaire {
     margin-bottom: 3rem;
 }
-#ConfirmCommande, #EnvoiDuFormulaire {
+#ConfirmCommande, #SendFormulaire {
     float: right;
 }
 .Options {
@@ -230,6 +230,10 @@ textarea {
     flex-direction: column;
     margin-top: 5rem;
     align-items: center;
+}
+#prixTotalPanier {
+    font-weight: bolder;
+    color:#8855F1;
 }
 td, th {
     vertical-align: middle;

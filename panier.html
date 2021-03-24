@@ -70,7 +70,69 @@
           </tfoot>
         </table>
         <button id="SupprPanier" class="SupprPanier">Vider le Panier</button>
-        <a href ="formulaire.html"><button type ="submit" value="submit" id="ConfirmCommande">Passer la commande</button></a>
+
+        <section id="FormulaireCoordonnées">
+          <div class="title_container" class="text_container">
+            <h1>Vos coordonnées</h1>
+            <p class="introduction_description"> Merci de bien vouloir renseigner vos coordonnées pour finaliser votre commande.</p>
+          </div>
+          <form action="" onsubmit="return SendForm()" method="POST" id="contact_form" class="col">
+            <table class="form-style">
+              <tr class="col">
+                <td>
+                  <label for="civilité">Civilité<span class="required"> *</span></label><br/>
+                  <input type="radio" id="Mr" name="drone" value="M.">
+                  <span for="M.">M.</span>
+            
+                  <input type="radio" id="Mme" name="drone" value="Mme">
+                  <span for="Mme">Mme</span>
+                </td>
+                <td>
+                  <label for="firstName">Nom<span class="required"> *</span></label><br/>
+                  <input type="text" id="firstName" name="name" class="long" required="required" placeholder="Nom"/>
+                  <span class="error" id="errorfirstName"></span>
+                </td>
+                <td>
+                  <label for="lastName">Prénom<span class="required"> *</span></label><br/>
+                  <input type="text" id="lastName" name="name" class="long" required="required" placeholder="Prénom"/>
+                  <span class="error" id="errorlastName"></span>
+                </td>
+                <td>
+                  <label for="mobile">Mobile<span class="required"> *</span></label><br/>
+                  <input type="text" id="mobile" name="mobile" class="long" required="required" minlength="10" maxlength="10" placeholder="Mobile"/>
+                  <span class="error" id="errormobile"></span>
+                </td>
+              </tr>
+              <tr class="col">
+                <td>
+                  <label for="email">E-mail<span class="required"> *</span></label><br/>
+                  <input type="email" id="email" name="email" class="long" required="required" placeholder="Email"/>
+                  <span class="error" id="erroremail"></span>
+                </td>
+                <td>
+                  <label for="address">Adresse<span class="required"> *</span></label><br/>
+                  <input type="text" id="address" name="adresse" class="long" required="required" placeholder="Adresse"/>
+                  <span class="error" id="erroraddress"></span>
+                </td>
+                <td>
+                  <label for="postal">Code postal<span class="required"> *</span></label><br/>
+                  <input type="text" id="postal" name="postal" class="long" required="required" placeholder="Code postal"/>
+                  <span class="error" id="errorpostal"></span>
+                </td>
+                <td>
+                  <label for="city">Ville<span class="required"> *</span></label><br/>
+                  <input type="text" id="city" name="city" class="long" required="required" placeholder="Ville"/>
+                  <span class="error" id="errorcity"></span>
+                </td>
+              </tr>
+            </table>
+              <div>
+                <p><span class="required"><strong>* </strong></span>Champs obligatoires</p>
+                <input id="SendFormulaire" type="submit" value="Passer la commande"/>      
+                <input id="Formulaire" type="reset" value="Réinitialiser"> 
+              </div>
+          </form>
+        </section>
       </main>
       <!-- FOOTER -->
       <footer class="footer">
@@ -139,6 +201,7 @@
     
     <script src="js/ajax.js"></script>
     <script src="js/panier.js"></script>
+    <script src="js/formulaire.js"></script>
     <script src="js/Cameras_Vintages.js"></script>
   </body>
 </html>
