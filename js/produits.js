@@ -1,20 +1,21 @@
-/* RECUPERATION URL - ID DU PRODUIT*/
+/* RECUPERATION URL - ID DU PRODUIT - Création d'une constante "id" accessible uniquement en lecture */
 let params = (new URL(document.location)).searchParams;
-const id = params.get("id");
+const id = params.get("id"); 
+/* l'interface URL retourne un objet URLSearchParams, permettant d'accéder aux arguments décodés de la requête GET contenu dans l'URL */
 
-/* RÉCUPÉRATION DU LOCAL STORAGE */
+/* RÉCUPÉRATION DU LOCAL STORAGE (obtention d’informations pour la panier) */
 function addLocalStorage(panier) {
   localStorage.setItem('panier', JSON.stringify(panier));
 }
 
-/* PLACEMENT DANS MON CODE HTML */
+/* PLACEMENT DANS MON CODE HTML - Création de la variable */
 let container = document.getElementById("Container_Product");
 
-/* API - Récupération FETCH */
-fetch("http://localhost:3000/api/cameras/" + id)
+/* API - Récupération FETCH - La méthode then() renvoie une promesse (objet qui est renvoyé, ici "Cameras_Vintages") pour éviter les rappels */
+fetch("http://localhost:3000/api/cameras/" + id) /* id = ObjectID */
     .then(response => response.json())  
     .then(function (product) { 
-        let camera = new Cameras_Vintages (product)
+        let camera = new Cameras_Vintages (product) 
         display(camera);
     })
 
@@ -28,7 +29,7 @@ const display = camera => {
   Container_Product.innerHTML += `
   <div class="row Article">
     <div class="col">    
-      <article class="Article_Product">
+      <article class="Article_Product apparition_produit">
         <img src=${camera.imageUrl} alt="photos produits" class="ImageProduct"/>
         <div class="DescriptionProduct">
           <h2>${camera.name}</h2>
@@ -55,7 +56,7 @@ const display = camera => {
     </div>
   </div> `;
 
-/* PARTIE "for" OPTION LENTILLES */
+/* PARTIE "for" OPTION LENTILLES - Appel de l'ID lenses et création du menu déroulant pour les options lentilles */
 for (let lenses of camera.lenses){
     document.getElementById('option_lentilles').innerHTML+=
     `<option>${lenses}</option>`
@@ -64,9 +65,11 @@ for (let lenses of camera.lenses){
 /* FUNCTION AJOUT AU PANIER */
 function addProductPanier(camera) {
     camera.quantity = parseInt(document.getElementById('quantity').value);
-    /* RECUPERATION PANIER LS */
+    /* RECUPERATION PANIER LOCAL STORAGE */
     let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
-    /* BOUCLE SI PRODUIT EXISTE DANS PANIER */
+    /* BOUCLE SI PRODUIT EXISTE DANS PANIER
+    Utilisation d'instruction if/else pour exécuter une instruction si une condition donnée est vraie
+    Quand le panier est vide = ajout de la caméra dans le panier */
     let cameraAlreadyInPanier = false;
     for (let i = 0; i < panier.length; i++) {
       let product = panier[i];
@@ -74,6 +77,8 @@ function addProductPanier(camera) {
         cameraAlreadyInPanier = i;
       }
     };
+    /* Utilisation d'instruction if/else (si la condition donnée est vraie).
+    Si la caméra est déjà dans le panier, ajout d'une autre caméra "quantity" */
     if (false !== cameraAlreadyInPanier) {
       panier[cameraAlreadyInPanier].quantity = parseInt(panier[cameraAlreadyInPanier].quantity) + camera.quantity;
     } else {
@@ -81,7 +86,7 @@ function addProductPanier(camera) {
     };
     addLocalStorage(panier);
   }
-  /* CLICK AJOUT PANIER */
+  /* CLICK AJOUT PANIER - Envoi de la caméra dans le panier */
       document.getElementById('panier').addEventListener('click', function () {
         addProductPanier(camera)
     });

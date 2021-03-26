@@ -1,8 +1,9 @@
 /* PLACEMENT DANS MON CODE HTML */
 let container = document.getElementById("Container_confirmation");
 
-/* RECUPERATION DES DONNEES DE L URL */
+/* RECUPERATION DES DONNEES DE L'URL */
 let params = (new URL(document.location)).searchParams;
+let orderId = params.get("orderId");
 
 /* RECUPERATION DES DONNEES CONTACT */
 let contact = JSON.parse(localStorage.getItem("contact"));
@@ -10,16 +11,26 @@ let contact = JSON.parse(localStorage.getItem("contact"));
 /* RECUPERATION DU PRIX TOTAL */
 let prixTotalPanier = JSON.parse(localStorage.getItem("prixTotalPanier"));
 
-/* RECUPERATION DU FORMULAIRE */
-let SendFormulaire = document.getElementById("SendFormulaire");
+/* RECUPERATION DU PANIER */
+let camera_vintage = JSON.parse(localStorage.getItem("camera_vintage"));
 
-/* AFFICHAGE HTML */
+/* AFFICHAGE DANS HTML - Paragraphe de remerciement pour la commande passé par l'utilisateur */
 function RecapCommande (){
     Container_confirmation.innerHTML += `
-        <p> Merci ${contact.firstName} ${contact.lastName} pour votre commande N°
-        d'un montant de : ${prixTotalPanier} </br> 
-        Un email vous sera envoyé à l'adresse suivante : ${contact.email} </p> 
+        <div>
+            <div class="confirmation_commande">
+                <i class="fas fa-check validation_commande"></i>
+            </div>
+            <p> Merci ${contact.firstName} ${contact.lastName} pour votre commande n°${orderId}
+            d'un montant de <strong> ${prixTotalPanier} </strong></br> 
+            Un email de confirmation vous sera envoyé à l'adresse suivante : ${contact.email} <br/></p>
+            
+            <p>Le colis vous sera livré sous 5 jours ouvrés à l'adresse indiqué : ${contact.address} ${contact.postal} ${contact.city}.<br/>
+            Vous serez informé des étapes de livraison par email.</p>
+
+            <h3> À bientôt !</h3>
+            <i class="fas fa-camera"></i>
+        </div>
     `;
 };
-
-RecapCommande();
+RecapCommande ();

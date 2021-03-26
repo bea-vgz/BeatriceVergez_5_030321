@@ -41,7 +41,7 @@
 
       <!--INTRO-->
       <section class="introduction">
-        <div class="title_container">
+        <div class="title_container" id="title_container">
           <h1>Votre panier</h1>
           <p class="introduction_description">Voici un récapitulatif de votre commande. Vous pouvez encore la modifier avant la prochaine étape.</p>
         </div>
@@ -53,15 +53,12 @@
             <tr>
               <th class="srcimage">Photos</th>
               <th>Nom</th>
-              <th>Lentilles</th>
               <th>Quantité</th>
               <th>Prix</th>
-              <th>Supprimer</th>
             </tr>
           </thead>
           <tfoot>
             <tr>
-              <td></td>
               <td></td>
               <td></td>
               <th><strong>TOTAL</strong></th>
@@ -70,6 +67,7 @@
           </tfoot>
         </table>
         <button id="SupprPanier" class="SupprPanier">Vider le Panier</button>
+        <div id="PanierVide" class="text-center"></div>
 
         <section id="FormulaireCoordonnées">
           <div class="title_container" class="text_container">
@@ -81,11 +79,13 @@
               <tr class="col">
                 <td>
                   <label for="civilité">Civilité<span class="required"> *</span></label><br/>
-                  <input type="radio" id="Mr" name="drone" value="M.">
+                  <input type="radio" id="civilité" name="drone" value="M.">
                   <span for="M.">M.</span>
+                  <span class="error" id="errorcivilité"></span>
             
-                  <input type="radio" id="Mme" name="drone" value="Mme">
+                  <input type="radio" id="civilité" name="drone" value="Mme">
                   <span for="Mme">Mme</span>
+                  <span class="error" id="errorcivilité"></span>
                 </td>
                 <td>
                   <label for="firstName">Nom<span class="required"> *</span></label><br/>

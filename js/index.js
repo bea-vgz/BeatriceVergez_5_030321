@@ -1,7 +1,9 @@
-/* PLACEMENT DANS MON CODE HTML */
-let container = document.getElementById("Container_Camera");
+/* PLACEMENT DANS MON CODE HTML - Création de la variable */
+let container = document.getElementById("Container_Camera"); 
+/* renvoie l'objet "Element" dont la propriété "id" correspond à la chaîne de caractères spécifiée. 
+L'ID (identifiant) de l'élément est localisé et placé dans mon HTML. */
 
-/* API - Récupération FETCH */
+/* API - Récupération FETCH - Moyen de écupérer les ressources/données à travers le réseau de manière asynchrone */
 fetch("http://localhost:3000/api/cameras")
     .then(response => response.json())  
     .then(function (listProduct) { 
@@ -10,18 +12,18 @@ fetch("http://localhost:3000/api/cameras")
             display(camera);
         }
     })
-/* API - MESSAGE ERROR */
+/* API - MESSAGE ERROR - Message d'erreur si les informations récupérées ne sont pas disponibles */
     .catch(function (error) {
         console.log("Error")
         alert("Produit non disponible")
     });
 
-/* CODE HTML ARTICLES CAMERAS */
+/* CODE HTML ARTICLES CAMERAS - Création de la fonction et insertion des ID appelés par la variable */
 function display(camera) {
     Container_Camera.innerHTML += `
     <div class="row Article">
         <div class="col">
-            <article class="ArticleProduct">
+            <article class="ArticleProduct animation_article">
                 <a href="produits.html?id=${camera.id}" class="article">
                     <figure class="FigureProduct">
                         <img src=${camera.imageUrl} alt="photos produits" class="Image_article" />
@@ -36,4 +38,4 @@ function display(camera) {
             </article>
         </div>
     </div>`;
-}
+};

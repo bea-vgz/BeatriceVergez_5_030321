@@ -1,3 +1,4 @@
+/* Création d'une classe "Cameras_Vintages" utilisée pour créer et initialiser un objet qui sera appelé tout au long du projet */
 class Cameras_Vintages {
     constructor({
         name,

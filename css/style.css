@@ -149,8 +149,14 @@ li a {
 }
 .OptionsQuantity {
     margin-right : 1rem;
+    border-radius: 1rem;
+    padding: 0.3rem;
 }
-#panier, #ConfirmCommande, #SupprPanier, #Formulaire, #SendFormulaire {
+.options {
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+#panier, #ConfirmCommande, #SupprPanier, #Formulaire, #SendFormulaire, #Validation {
     background-color: #8855F1;
     color: white;
     padding-top : 0.5rem;
@@ -161,11 +167,13 @@ li a {
     text-transform: uppercase;
     margin-top: 2rem;
     border: none;
+    transition: all 0.5s ease;
 }
-#panier:hover, #ConfirmCommande:hover, #SupprPanier:hover, #Formulaire:hover, #SendFormulaire:hover {
+#panier:hover, #ConfirmCommande:hover, #SupprPanier:hover, #Formulaire:hover, #SendFormulaire:hover, #Validation:hover {
     background-color: #E97400;
+    transform: scale(1.08);
 }
-#ConfirmCommande, #SupprPanier, #Formulaire, #SendFormulaire {
+#ConfirmCommande, #SupprPanier, #Formulaire, #SendFormulaire, #Validation {
     margin-bottom: 3rem;
 }
 #ConfirmCommande, #SendFormulaire {
@@ -182,6 +190,12 @@ li a {
 	width: 10rem;
 	border-radius: 1rem;
 }
+.panier_icon {
+    margin-bottom: 2rem;
+}
+.container_panierVide {
+    margin: 5rem;
+} 
 /* END Articles produits */
 /* Champs formulaire */
 .form-style {
@@ -249,4 +263,37 @@ table {
 .SupprProduct {
     border-style: none;
     background-color: white;
+}
+/* CONFIRMATION */
+#Container_confirmation {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+}
+/* Animation */ 
+.animation_article, .ImageProduct {
+    transition: all 0.5s ease;
+    animation: apparition_appareil;
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+.animation_article:hover {
+    transform: scale(1.08);
+}
+@keyframes apparition_appareil {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.validation_commande {
+    padding: 0.7rem;
+    border-radius: 10rem;
+    background-color: green;
+    color:white;
+    margin-bottom: 2rem;
 }
