@@ -20,13 +20,13 @@ function TOTAL_PANIER(camera){
 };
 
 /* LE PANIER HTML */
-camera_vintage.forEach((camera, i) => { /* Pour chaque caméras ajoutées au panier, ajout de l'image, le nom, la quantité, le prix */
+camera_vintage.forEach((camera, i) => { /* Pour chaque caméras ajoutées au panier, ajout de l'image, le nom, la quantité, le prix (en fonction de la quantité) */
     Container_Panier.innerHTML += `
     <table class="table">
         <tr class="Tableau">
             <td><img class="ImagePanier" src=${camera.imageUrl} alt="" /></td>
             <td><h5>${camera.name}</h5></td>
-            <td>${camera.quantity}</td>
+            <td type="number">${camera.quantity}</td>
             <td><strong>${camera.quantity * camera.price / 100} €</strong></td>
             <td><button class="SupprProduct fas fa-trash fa text-danger" data-id="${i}"></button></td>
         </tr>

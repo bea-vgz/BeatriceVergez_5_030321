@@ -70,6 +70,11 @@ li a {
     font-family: Montserrat;
     font-style: italic;
 }
+.Hero_banner {
+    padding-top: 32px;
+    box-sizing: border-box;
+    width: 100%;
+}
 /* FOOTER */
 .container_footer {
     display: flex;
@@ -273,8 +278,8 @@ table {
     font-size: 1.4rem;
 }
 /* Animation */ 
-.animation_article, .ImageProduct {
-    transition: all 0.5s ease;
+.animation_article, .ImageProduct, .Hero_banner {
+    transition: all 0.6s ease;
     animation: apparition_appareil;
     animation-fill-mode: both;
     animation-duration: 1s;

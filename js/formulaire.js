@@ -30,16 +30,16 @@ function SendForm () {
       .then(function (response) {
         return response.json()
       })
-      .then(function() {
-        localStorage.setItem("contact", JSON.stringify(contact));
-        window.location.href = "confirmation.html";
+      .then(function(cam) {
+        localStorage.setItem("contact", JSON.stringify(cam.contact));
+        window.location.assign("confirmation.html?orderId=" + cam.orderId);
       })
       /* API - MESSAGE ERROR */
       .catch(function (error) {
         console.log("Error");
       });
   } else {
-    alert("Une erreur est survenue ! Veuillez remplir les champs ci-dessous ou vérifier votre commande.")
+    alert("Oups ! Une erreur est survenue. Veuillez remplir les champs ci-dessous ou vérifier votre commande.")
   };
   /* REMPLISSAGE DES CHAMPS */
   if (firstName.value == "")                                  

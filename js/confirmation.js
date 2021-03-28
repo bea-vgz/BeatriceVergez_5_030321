@@ -3,6 +3,8 @@ let container = document.getElementById("Container_confirmation");
 
 /* RECUPERATION DES DONNEES DE L'URL */
 let params = (new URL(document.location)).searchParams;
+
+/* RECUPERATION DE L'ID */
 let orderId = params.get("orderId");
 
 /* RECUPERATION DES DONNEES CONTACT */
@@ -30,7 +32,6 @@ function RecapCommande (){
 
             <h3> À bientôt !</h3>
             <i class="fas fa-camera"></i>
-        </div>
     `;
 };
 RecapCommande ();

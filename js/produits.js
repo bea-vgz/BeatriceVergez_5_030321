@@ -71,14 +71,14 @@ function addProductPanier(camera) {
     Utilisation d'instruction if/else pour exécuter une instruction si une condition donnée est vraie
     Quand le panier est vide = ajout de la caméra dans le panier */
     let cameraAlreadyInPanier = false;
-    for (let i = 0; i < panier.length; i++) {
+    for (let i = 0; i < panier.length; i++) { 
       let product = panier[i];
       if (product.id === camera.id) {
         cameraAlreadyInPanier = i;
       }
     };
     /* Utilisation d'instruction if/else (si la condition donnée est vraie).
-    Si la caméra est déjà dans le panier, ajout d'une autre caméra "quantity" */
+    Si la caméra est déjà dans le panier, ajout d'une autre caméra "quantity" on incrémente la quantité */
     if (false !== cameraAlreadyInPanier) {
       panier[cameraAlreadyInPanier].quantity = parseInt(panier[cameraAlreadyInPanier].quantity) + camera.quantity;
     } else {
