@@ -28,7 +28,7 @@ camera_vintage.forEach((camera, i) => { /* Pour chaque caméras ajoutées au pan
             <td><h5>${camera.name}</h5></td>
             <td type="number">${camera.quantity}</td>
             <td><strong>${camera.quantity * camera.price / 100} €</strong></td>
-            <td><button class="SupprProduct fas fa-trash fa text-danger" data-id="${i}"></button></td>
+            <td><button class="SupprProduct fas fa-trash fa text-danger" data-id="${i}" title="Supprimer un produit"></button></td>
         </tr>
     </table>
     `;
@@ -60,7 +60,7 @@ SupprPanier.addEventListener('click', deletePanier);
 /* FONCTION SUPPRIME TOUT LE PANIER */
 function deletePanier() {
   document.getElementById("PanierVide").innerHTML += `
-    <div class="container col-6 text-center border shadow rounded p-4">
+    <div class="container col-6 text-center shadow rounded p-4 Panier_vide">
       <h1 class="mb-4">Votre panier est vide...</h1>
       <i class="panier_icon fas fa-shopping-cart fa-2x"></i><br />
       <a href ="index.html"><input id="Validation" type="submit" value="Retour à l'accueil"/></a>
@@ -78,3 +78,4 @@ function deletePanier() {
     alert("Votre panier est sur le point d'être supprimer")
   }
 };
+

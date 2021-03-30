@@ -43,7 +43,7 @@ const display = camera => {
           </div>
           <div class="Quantité">
             <h4 class="OptionsQuantité"> Quantité </h4>
-            <select class="OptionsQuantity" id = "quantity">           
+            <select class="OptionsQuantity" id="quantity">           
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -78,7 +78,7 @@ function addProductPanier(camera) {
       }
     };
     /* Utilisation d'instruction if/else (si la condition donnée est vraie).
-    Si la caméra est déjà dans le panier, ajout d'une autre caméra "quantity" on incrémente la quantité */
+    Si la caméra est déjà dans le panier, ajout d'une autre caméra "quantity", on incrémente la quantité */
     if (false !== cameraAlreadyInPanier) {
       panier[cameraAlreadyInPanier].quantity = parseInt(panier[cameraAlreadyInPanier].quantity) + camera.quantity;
     } else {

@@ -14,7 +14,7 @@ let contact = JSON.parse(localStorage.getItem("contact"));
 let prixTotalPanier = JSON.parse(localStorage.getItem("prixTotalPanier"));
 
 /* RECUPERATION DU PANIER */
-let camera_vintage = JSON.parse(localStorage.getItem("camera_vintage"));
+let panier = JSON.parse(localStorage.getItem("panier"));
 
 /* AFFICHAGE DANS HTML - Paragraphe de remerciement pour la commande passé par l'utilisateur */
 function RecapCommande (){
@@ -23,15 +23,16 @@ function RecapCommande (){
             <div class="confirmation_commande">
                 <i class="fas fa-check validation_commande"></i>
             </div>
-            <p> Merci ${contact.firstName} ${contact.lastName} pour votre commande n°${orderId}
+            <p> Merci ${contact.civilité} ${contact.firstName} ${contact.lastName} pour votre commande n°${orderId}
             d'un montant de <strong> ${prixTotalPanier} </strong></br> 
             Un email de confirmation vous sera envoyé à l'adresse suivante : ${contact.email} <br/></p>
             
-            <p>Le colis vous sera livré sous 5 jours ouvrés à l'adresse indiqué : ${contact.address} ${contact.postal} ${contact.city}.<br/>
+            <p>Le colis vous sera livré sous 5 jours ouvrés à l'adresse indiqué : <strong> ${contact.address} ${contact.postal} ${contact.city}. </strong><br/>
             Vous serez informé des étapes de livraison par email.</p>
 
-            <h3> À bientôt !</h3>
+            <h3>À bientôt !</h3>
             <i class="fas fa-camera"></i>
+        </div>
     `;
 };
 RecapCommande ();

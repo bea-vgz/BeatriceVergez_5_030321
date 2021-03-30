@@ -4,6 +4,7 @@ function SendForm () {
   let contact_form = document.getElementById("contact_form");
   if (contact_form.reportValidity() == true) {
     let contact = {
+      'civilité' : document.getElementById("civilité").value,
       'firstName' : document.getElementById("firstName").value,
       'lastName' : document.getElementById("lastName").value,                
       'email' : document.getElementById("email").value,
@@ -89,7 +90,7 @@ function SendForm () {
       postal.focus(); 
       return false; 
   } else {
-      document.getElementById('errorpostal').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('postal').innerHTML=`<i class="fas fa-check"></i>`;
       postal.style.color = 'green';  
   };
   if (city.value == "")                                   
@@ -110,8 +111,9 @@ function SendForm () {
   };
 }
 
-  let SendFormulaire = document.getElementById("SendFormulaire");
+let SendFormulaire = document.getElementById("SendFormulaire");
   SendFormulaire.addEventListener('click', function (event) {
     event.preventDefault();
     SendForm();
+    
 });

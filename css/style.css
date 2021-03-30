@@ -93,6 +93,11 @@ li a {
 	color: rgb(71, 71, 71);
     margin-left: -2.5rem;
 }
+.footer a:hover {
+    font-weight: 700;
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+}
 /* END FOOTER */
 
 /* Articles produits */
@@ -269,13 +274,16 @@ table {
     border-style: none;
     background-color: white;
 }
+.Panier_vide {
+    margin: 8rem;
+}
 /* CONFIRMATION */
 #Container_confirmation {
     display: flex;
     text-align: center;
     justify-content: center;
     margin-bottom: 3rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 /* Animation */ 
 .animation_article, .ImageProduct, .Hero_banner {
