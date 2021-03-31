@@ -80,11 +80,27 @@ li a {
     display: flex;
     justify-content: space-around;
     justify-content: center;
-}
-.footer {
     background-color: #f3e9f1;
     padding: 2rem;
     border-radius: 1rem 1rem 0 0;
+}
+.footer_title { 
+    text-align: center;
+    padding: 1.5rem;
+}
+.social {
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 3rem;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.picto_reseau {
+    color: #8855F1;
+}
+.footer{
+    text-align: center;
 }
 .footer li {
 	list-style-type: none;
@@ -97,6 +113,13 @@ li a {
     font-weight: 700;
     text-decoration: none;
     color: rgb(71, 71, 71);
+}
+.footer_1 {
+    display:flex;
+}
+.container_flex {
+    display:flex;
+    justify-content: space-between;
 }
 /* END FOOTER */
 

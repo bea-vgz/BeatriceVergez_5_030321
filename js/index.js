@@ -3,7 +3,7 @@ let container = document.getElementById("Container_Camera");
 /* renvoie l'objet "Element" dont la propriété "id" correspond à la chaîne de caractères spécifiée. 
 L'ID (identifiant) de l'élément est localisé et placé dans mon HTML. */
 
-/* API - Récupération FETCH - Moyen de écupérer les ressources/données à travers le réseau de manière asynchrone */
+/* API - Récupération FETCH - Moyen de récupérer les ressources/données à travers le réseau de manière asynchrone */
 fetch("http://localhost:3000/api/cameras")
     .then(response => response.json())  
     .then(function (listProduct) { 
