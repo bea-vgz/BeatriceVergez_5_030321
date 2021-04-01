@@ -1,6 +1,6 @@
 /* GESTION PARTIE FORMULAIRE */
 
-function SendForm () {
+function SendForm() {
   let contact_form = document.getElementById("contact_form");
   if (contact_form.reportValidity() == true) {
     let contact = {
@@ -28,7 +28,7 @@ function SendForm () {
       },
       body: FormClient
       })
-      .then(function (response) {
+      .then(function(response) {
         return response.json()
       })
       .then(function(cam) {
@@ -112,8 +112,7 @@ function SendForm () {
 }
 
 let SendFormulaire = document.getElementById("SendFormulaire");
-  SendFormulaire.addEventListener('click', function (event) {
+  SendFormulaire.addEventListener('click', function(event) {
     event.preventDefault();
     SendForm();
-    
 });

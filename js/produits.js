@@ -25,7 +25,7 @@ fetch("http://localhost:3000/api/cameras/" + id) /* id = ObjectID */
 });
 
 /* CODE HTML ARTICLES CAMERAS */
-const display = camera => {
+function display(camera) {
   Container_Product.innerHTML += `
   <div class="row Article">
     <div class="col">    
@@ -56,14 +56,14 @@ const display = camera => {
     </div>
   </div> `;
 
-/* PARTIE "for" OPTION LENTILLES - Appel de l'ID lenses et création du menu déroulant pour les options lentilles */
-for (let lenses of camera.lenses){
-    document.getElementById('option_lentilles').innerHTML+=
-    `<option>${lenses}</option>`
+  /* PARTIE "for" OPTION LENTILLES - Appel de l'ID lenses et création du menu déroulant pour les options lentilles */
+  for (let lenses of camera.lenses) {
+    document.getElementById('option_lentilles').innerHTML +=
+      `<option>${lenses}</option>`;
   }
 
-/* FUNCTION AJOUT AU PANIER */
-function addProductPanier(camera) {
+  /* FUNCTION AJOUT AU PANIER */
+  function addProductPanier(camera) {
     camera.quantity = parseInt(document.getElementById('quantity').value);
     /* RECUPERATION PANIER LOCAL STORAGE */
     let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
@@ -71,7 +71,7 @@ function addProductPanier(camera) {
     Utilisation d'instruction if/else pour exécuter une instruction si une condition donnée est vraie
     Quand le panier est vide = ajout de la caméra dans le panier */
     let cameraAlreadyInPanier = false;
-    for (let i = 0; i < panier.length; i++) { 
+    for (let i = 0; i < panier.length; i++) {
       let product = panier[i];
       if (product.id === camera.id) {
         cameraAlreadyInPanier = i;
@@ -87,7 +87,7 @@ function addProductPanier(camera) {
     addLocalStorage(panier);
   }
   /* CLICK AJOUT PANIER - Envoi de la caméra dans le panier */
-      document.getElementById('panier').addEventListener('click', function () {
-        addProductPanier(camera)
-    });
-};
+  document.getElementById('panier').addEventListener('click', function () {
+    addProductPanier(camera);
+  });
+}

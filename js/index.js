@@ -8,7 +8,7 @@ fetch("http://localhost:3000/api/cameras")
     .then(response => response.json())  
     .then(function (listProduct) { 
         for (let product of listProduct) {
-            let camera = new Cameras_Vintages (product)
+            let camera = new Cameras_Vintages(product)
             display(camera);
         }
     })

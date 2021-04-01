@@ -78,14 +78,14 @@
             <table class="form-style">
               <tr class="col">
                 <td>
-                  <label for="civilité">Civilité</label><br/>
-                  <input type="radio" id="civilité" name="drone" value="M." required="required">
-                  <span for="M.">M.</span>
-                  <span class="error" id="errorcivilité"></span>
-            
-                  <input type="radio" id="civilité" name="drone" value="Mme" required="required">
-                  <span for="Mme">Mme</span>
-                  <span class="error" id="errorcivilité"></span>
+                  <div class="Civilité"> 
+                    <label for="civilité" required="required">Civilité</label><br/>
+                    <select class="OptionsCivilité" id="civilité">           
+                      <option value="M.">M.</option>
+                      <option value="Mme">Mme</option>
+                    </select>
+                    <span class="error" id="errorcivilité"></span>
+                  </div>
                 </td>
                 <td>
                   <label for="firstName">Nom<span class="required"> *</span></label><br/>
