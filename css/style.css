@@ -99,7 +99,7 @@ li a {
 .picto_reseau {
     color: #8855F1;
 }
-.footer{
+.footer ul {
     text-align: center;
 }
 .footer li {
@@ -107,18 +107,17 @@ li a {
 }
 .footer a {
 	color: rgb(71, 71, 71);
-    margin-left: -2.5rem;
 }
 .footer a:hover {
     font-weight: 700;
     text-decoration: none;
     color: rgb(71, 71, 71);
 }
-.footer_1 {
-    display:flex;
-}
 .container_flex {
-    display:flex;
+    margin: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    text-align: center;
     justify-content: space-between;
 }
 /* END FOOTER */
@@ -188,6 +187,7 @@ li a {
 .OptionsCivilité {
     border-radius: 1rem;
     padding: 0.3rem;
+    border: 1px solid #BEBEBE;
 }
 .options {
     border-radius: 1rem;
