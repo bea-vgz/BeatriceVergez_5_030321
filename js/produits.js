@@ -68,8 +68,8 @@ function display(camera) {
     /* RECUPERATION PANIER LOCAL STORAGE */
     let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
     /* BOUCLE SI PRODUIT EXISTE DANS PANIER
-    Utilisation d'instruction if/else pour exécuter une instruction si une condition donnée est vraie
-    Quand le panier est vide = ajout de la caméra dans le panier */
+    Création variable "i" - Utilisation d'instruction if/else pour exécuter une instruction si une condition donnée est vraie
+    Ajout de la caméra dans le panier */
     let cameraAlreadyInPanier = false;
     for (let i = 0; i < panier.length; i++) {
       let product = panier[i];
