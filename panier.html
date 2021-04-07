@@ -31,7 +31,7 @@
 
       <!-- HEADER -->
       <header class="header col">
-        <a href=javascript:history.go(-1)><img class="nav_arrow"><i class="fas fa-angle-left fa-2x"></i></a>
+        <a href=javascript:history.go(-1)><i class="nav_arrow fas fa-angle-left fa-2x"></i></a>
         <a href="index.html"><img class="logo_orinoco" src="./Back-end/images/logo_orinoco.png" alt="Orinico"></a>
         <nav class="nav">
           <a href="index.html" class="nav_link"><i class="fas fa-home nav_picto"></i>Accueil</a>
@@ -40,14 +40,15 @@
       <!-- END HEADER -->
 
       <!--INTRO-->
-      <section class="introduction">
-        <div class="title_container" id="title_container">
-          <h1>Votre panier</h1>
-          <p class="introduction_description">Voici un récapitulatif de votre commande. Vous pouvez encore la modifier avant la prochaine étape.</p>
-        </div>
-      </section>
-      <!-- END INTRO-->
       <main>
+        <div class="introduction">
+          <div class="title_container" id="title_container">
+            <h1>Votre panier</h1>
+            <p class="introduction_description">Voici un récapitulatif de votre commande. Vous pouvez encore la modifier avant la prochaine étape.</p>
+          </div>
+        </div>
+      <!-- END INTRO-->
+      <!-- PANIER -->
         <table id="Container_Panier">
           <thead>
             <tr>
@@ -68,19 +69,20 @@
         </table>
         <button id="SupprPanier" class="SupprPanier">Vider le Panier</button>
         <div id="PanierVide" class="text-center"></div>
-
+      <!-- END PANIER -->
+      <!-- FORMULAIRE -->
         <section id="FormulaireCoordonnées">
-          <div class="title_container" class="text_container">
-            <h1>Vos coordonnées</h1>
+          <div class="title_container">
+            <h2 class="coordonnees_title">Dernière étape !</h2>
             <p class="introduction_description"> Merci de bien vouloir renseigner vos coordonnées pour finaliser votre commande.</p>
           </div>
-          <form action="" onsubmit="return SendForm()" method="POST" id="contact_form" class="col">
+          <form onsubmit="return SendForm()" method="POST" id="contact_form" class="col">
             <table class="form-style">
               <tr class="col">
                 <td>
                   <div class="Civilité"> 
-                    <label for="civilité" required="required">Civilité</label><br/>
-                    <select class="OptionsCivilité" id="civilité" placeholder="Civilité">           
+                    <label for="civilité">Civilité</label><br/>
+                    <select class="OptionsCivilité" id="civilité">           
                       <option value="M.">M.</option>
                       <option value="Mme">Mme</option>
                     </select>
@@ -133,6 +135,7 @@
               </div>
           </form>
         </section>
+      <!-- END FORMULAIRE -->
       </main>
       <!-- FOOTER -->
       <footer class="bloc footer">

@@ -235,6 +235,9 @@ li a {
 } 
 /* END Articles produits */
 /* Champs formulaire */
+.coordonnees_title {
+    text-align: center;
+}
 .form-style {
     margin: 10px auto;
     padding: 20px 12px 10px 20px;

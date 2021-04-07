@@ -3,7 +3,7 @@ let params = (new URL(document.location)).searchParams;
 const id = params.get("id"); 
 /* l'interface URL retourne un objet URLSearchParams, permettant d'accéder aux arguments décodés de la requête GET contenu dans l'URL */
 
-/* RÉCUPÉRATION DU LOCAL STORAGE (obtention d’informations pour la panier) */
+/* RÉCUPÉRATION DU LOCAL STORAGE (obtention d’informations pour le panier) */
 function addLocalStorage(panier) {
   localStorage.setItem('panier', JSON.stringify(panier));
 }

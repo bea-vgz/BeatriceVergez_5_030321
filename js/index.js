@@ -13,7 +13,7 @@ fetch("http://localhost:3000/api/cameras")
         }
     })
 /* API - MESSAGE ERROR - Message d'erreur si les informations récupérées ne sont pas disponibles */
-    .catch(function (error) {
+    .catch(function(error) {
         console.log("Error")
         alert("Produit non disponible")
     });
