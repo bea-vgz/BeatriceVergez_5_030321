@@ -38,7 +38,7 @@ camera_vintage.forEach((camera, i) => { /* Pour chaque caméras ajoutées au pan
 /* FUNCTION SUPPRESSION PRODUIT DU PANIER */
 function SupprProduct(id) { /* Création de la fonction suppression des caméras (id) */
   let camera = camera_vintage[id];
-  /* INSTRUCTIONS IF/ELSE - si la quantité est supérieure à 1, possibilité de supprimer un élément */
+  /* INSTRUCTIONS IF/ELSE - si la quantité est supérieure à 1, possibilité de supprimer un élément, suppression que d'un seul élément à la fois */
   if (camera.quantity > 1) {
     camera.quantity--;
   } else {
