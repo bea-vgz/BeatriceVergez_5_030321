@@ -2,7 +2,7 @@
 
 function SendForm() {
   let contact_form = document.getElementById("contact_form");
-  if (contact_form.reportValidity() == true) {
+  if (contact_form.reportValidity() == true && addIdPanier.length > 0) {
     let contact = {
       'civilité' : document.getElementById("civilité").value,
       'firstName' : document.getElementById("firstName").value,
@@ -13,9 +13,8 @@ function SendForm() {
       'postal' : document.getElementById("postal").value,
       'city' : document.getElementById("city").value,
     };
- 
     let products = addIdPanier;
-
+    
     let FormClient = JSON.stringify({
       contact, products,
     });

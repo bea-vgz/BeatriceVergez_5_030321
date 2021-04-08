@@ -1,4 +1,4 @@
-/* RECUPERATION PANIER LOCAL STORAGE - Création d'une instruction */
+/* RECUPERATION PANIER LOCAL STORAGE - Création d'une variable - Objet */
 let camera_vintage = JSON.parse(localStorage.getItem("panier")) ? JSON.parse(localStorage.getItem("panier")) : [];
 
 /* PLACEMENT DANS MON CODE HTML */
@@ -7,7 +7,7 @@ let container = document.getElementById("Container_Panier");
 /* PRIX INITIAL + INFO DU PANIER AVANT AJOUT CAMERA */
 let prixPanier = 0; /* prix des éléments */
 let prixTotalPanier = 0; /* prix total panier */
-let addIdPanier = []; /* panier vide */
+let addIdPanier = []; /* objet */
 
 /* FUNTION CALCUL PRIX TOTAL PANIER PRODUITS 
 Création de la fonction du Prix Total du panier */

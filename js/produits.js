@@ -67,12 +67,12 @@ function display(camera) {
     camera.quantity = parseInt(document.getElementById('quantity').value);
     /* RECUPERATION PANIER LOCAL STORAGE */
     let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
-    /* BOUCLE SI PRODUIT EXISTE DANS PANIER
-    Création variable "i" - Utilisation d'instruction if/else pour exécuter une instruction si une condition donnée est vraie
-    Ajout de la caméra dans le panier */
+    /* BOUCLE FOR PANIER = let variable = condition(si faux)
+    Création variable "i" - Utilisation d'instruction if/else pour exécuter une instruction */
     let cameraAlreadyInPanier = false;
     for (let i = 0; i < panier.length; i++) {
       let product = panier[i];
+      /* condition si le produit existe */
       if (product.id === camera.id) {
         cameraAlreadyInPanier = i;
       }
@@ -86,7 +86,7 @@ function display(camera) {
     };
     addLocalStorage(panier);
   }
-  /* CLICK AJOUT PANIER - Envoi de la caméra dans le panier */
+  /* CLICK AJOUT PANIER - appel fonction pour envoi de la caméra dans le panier */
   document.getElementById('panier').addEventListener('click', function () {
     addProductPanier(camera);
   });
