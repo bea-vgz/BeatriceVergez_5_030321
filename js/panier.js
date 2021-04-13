@@ -46,7 +46,7 @@ function SupprProduct(id) { /* Création de la fonction suppression des caméras
   }
   localStorage.setItem('panier', JSON.stringify(camera_vintage));
   window.location.reload();
-  alert("Le produit vient d'être supprimer")
+  alert("Le produit vient d'être supprimé")
 }
 /* CLICK SUPRESSION D'1 PRODUIT */
 document.querySelectorAll(".SupprProduct").forEach(deleteButton => {
@@ -75,7 +75,7 @@ function deletePanier() {
   } else {
     container.remove();
     localStorage.clear();
-    alert("Votre panier est sur le point d'être supprimer")
+    alert("Votre panier est sur le point d'être supprimé")
   }
 };
 

@@ -27,7 +27,7 @@ function RecapCommande (){
             d'un montant de <strong> ${prixTotalPanier} </strong></br> 
             Un email de confirmation vous sera envoyé à l'adresse suivante : ${contact.email} <br/></p>
             
-            <p>Le colis vous sera livré sous 5 jours ouvrés à l'adresse indiqué : <strong> ${contact.address} ${contact.postal} ${contact.city}. </strong><br/>
+            <p>Le colis vous sera livré sous 5 jours ouvrés à l'adresse indiquée : <strong> ${contact.address} ${contact.postal} ${contact.city}. </strong><br/>
             Vous serez informé des étapes de livraison par email.</p>
 
             <h3>À bientôt !</h3>

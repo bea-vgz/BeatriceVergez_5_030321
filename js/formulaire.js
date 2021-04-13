@@ -2,7 +2,7 @@
 
 function SendForm() {
   let contact_form = document.getElementById("contact_form");
-  if (contact_form.reportValidity() == true && addIdPanier.length > 0) {
+  if (contact_form.reportValidity() == true) {
     let contact = {
       'civilité' : document.getElementById("civilité").value,
       'firstName' : document.getElementById("firstName").value,
