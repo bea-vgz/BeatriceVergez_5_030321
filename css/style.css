@@ -232,7 +232,16 @@ li a {
 }
 .container_panierVide {
     margin: 5rem;
-} 
+}
+.AjoutQuantity, .SupprQuantity {
+    padding: 0.3rem;
+    border: none;
+    background-color: white;
+    color: #8855F1;
+}
+.AjoutQuantity:hover, .SupprQuantity:hover {
+    color: #E97400;
+}
 /* END Articles produits */
 /* Champs formulaire */
 .coordonnees_title {

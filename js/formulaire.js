@@ -1,8 +1,7 @@
-/* GESTION PARTIE FORMULAIRE */
-
+/* GESTION PARTIE FORMULAIRE - fonction avec création variable "contact" pour rubrique du formulaire client + variable products */
 function SendForm() {
   let contact_form = document.getElementById("contact_form");
-  if (contact_form.reportValidity() == true) {
+  if (contact_form.reportValidity() == true && camera_vintage.length > 0) {
     let contact = {
       'civilité' : document.getElementById("civilité").value,
       'firstName' : document.getElementById("firstName").value,
@@ -13,8 +12,10 @@ function SendForm() {
       'postal' : document.getElementById("postal").value,
       'city' : document.getElementById("city").value,
     };
+    /* produits dans panier */
     let products = addIdPanier;
     
+    /* La variable comprend la requête JSON qui contiendra la variable contact et la varible products */
     let FormClient = JSON.stringify({
       contact, products,
     });
@@ -41,7 +42,7 @@ function SendForm() {
   } else {
     alert("Oups ! Une erreur est survenue. Veuillez remplir les champs ci-dessous ou vérifier votre commande.")
   };
-  /* REMPLISSAGE DES CHAMPS */
+  /* REMPLISSAGE DES CHAMPS - si valeur n'est pas correctement remplie, alors return false, sinon validée */
   if (firstName.value == "")                                  
   {   document.getElementById('errorfirstName').innerHTML="Veuillez entrer votre nom";  
       firstName.focus(); 
@@ -109,7 +110,7 @@ function SendForm() {
       mobile.style.color = 'green'; 
   };
 }
-
+/* Écoute de l'évènement au click + appel fonction rubrique contact formulaire */
 let SendFormulaire = document.getElementById("SendFormulaire");
   SendFormulaire.addEventListener('click', function(event) {
     event.preventDefault();

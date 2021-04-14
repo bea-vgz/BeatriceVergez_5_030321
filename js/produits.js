@@ -8,9 +8,6 @@ function addLocalStorage(panier) {
   localStorage.setItem('panier', JSON.stringify(panier));
 }
 
-/* PLACEMENT DANS MON CODE HTML - Création de la variable */
-let container = document.getElementById("Container_Product");
-
 /* API - Récupération FETCH - La méthode then() renvoie une promesse (objet qui est renvoyé, ici "Cameras_Vintages") pour éviter les rappels */
 fetch("http://localhost:3000/api/cameras/" + id) /* id = ObjectID */
     .then(response => response.json())  
@@ -23,6 +20,9 @@ fetch("http://localhost:3000/api/cameras/" + id) /* id = ObjectID */
   .catch(function (error) {
     console.log("Error")
 });
+
+/* PLACEMENT DANS MON CODE HTML - Création de la variable */
+let container = document.getElementById("Container_Product");
 
 /* CODE HTML ARTICLES CAMERAS */
 function display(camera) {
@@ -48,6 +48,8 @@ function display(camera) {
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
             </select>
           </div> 
           <a href ="panier.html"><button type ="submit" value="submit" id="panier">Ajouter au panier</button></a>
@@ -65,10 +67,10 @@ function display(camera) {
   /* FUNCTION AJOUT AU PANIER */
   function addProductPanier(camera) {
     camera.quantity = parseInt(document.getElementById('quantity').value);
-    /* RECUPERATION PANIER LOCAL STORAGE */
+    /* RECUPERATION PANIER LOCAL STORAGE - les éléments seront envoyés dans le panier et pourront ainsi être récupérés */
     let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
     /* BOUCLE FOR PANIER = let variable = condition(si faux)
-    Création variable "i" - Utilisation d'instruction if/else pour exécuter une instruction */
+    Création variable "i" - Utilisation une varibale qui permet d'additionner plusieurs nbre */
     let cameraAlreadyInPanier = false;
     for (let i = 0; i < panier.length; i++) {
       let product = panier[i];
@@ -86,8 +88,9 @@ function display(camera) {
     };
     addLocalStorage(panier);
   }
-  /* CLICK AJOUT PANIER - appel fonction pour envoi de la caméra dans le panier */
-  document.getElementById('panier').addEventListener('click', function () {
-    addProductPanier(camera);
+  /* CLICK AJOUT PANIER - appel fonction pour envoi de la caméra dans le panier - Écoute de l'événement : action émise par l'utilisateur, comme le clic sur un bouton */
+  document.getElementById('panier') /* on récupère l'élément sur lequel je souhaite détecter le click */
+  .addEventListener('click', function() { /* on écoute l'élément click */
+  addProductPanier(camera); /* on utilise la fonction créée plus haut pour indiquer comment doit se comporter l'élément lors de l'ajout au panier */
   });
 }
