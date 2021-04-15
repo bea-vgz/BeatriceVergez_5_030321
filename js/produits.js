@@ -3,7 +3,7 @@ let params = (new URL(document.location)).searchParams;
 const id = params.get("id"); 
 /* l'interface URL retourne un objet URLSearchParams, permettant d'accéder aux arguments décodés de la requête GET contenu dans l'URL */
 
-/* RÉCUPÉRATION DU LOCAL STORAGE (obtention d’informations pour le panier) */
+/* LOCAL STORAGE (obtention d’informations pour le panier) */
 function addLocalStorage(panier) {
   localStorage.setItem('panier', JSON.stringify(panier));
 }
@@ -70,7 +70,7 @@ function display(camera) {
     /* RECUPERATION PANIER LOCAL STORAGE - les éléments seront envoyés dans le panier et pourront ainsi être récupérés */
     let panier = localStorage.getItem('panier') ? JSON.parse(localStorage.getItem('panier')) : [];
     /* BOUCLE FOR PANIER = let variable = condition(si faux)
-    Création variable "i" - Utilisation une varibale qui permet d'additionner plusieurs nbre */
+    Création variable "i" - Utilisation une variable qui permet d'additionner plusieurs nbre */
     let cameraAlreadyInPanier = false;
     for (let i = 0; i < panier.length; i++) {
       let product = panier[i];
