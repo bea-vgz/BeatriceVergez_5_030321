@@ -72,7 +72,7 @@ function display(camera) {
     /* BOUCLE FOR PANIER = let variable = condition(si faux)
     Création variable "i" - Utilisation une variable qui permet d'additionner plusieurs nbre */
     let cameraAlreadyInPanier = false;
-    for (let i = 0; i < panier.length; i++) {
+    for (let i = 0; i < panier.length; i++) { //.length renvoie le nombre de paires stockées.
       let product = panier[i];
       /* condition si le produit existe */
       if (product.id === camera.id) {

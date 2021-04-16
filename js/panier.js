@@ -4,7 +4,7 @@ let camera_vintage = JSON.parse(localStorage.getItem("panier")) ? JSON.parse(loc
 /* PRIX INITIAL + INFO DU PANIER AVANT AJOUT CAMERA */
 let prixPanier = 0; /* prix des éléments/produits selon la quantité */
 let prixTotalPanier = 0; /* prix total panier */
-let addIdPanier = []; /* objet */
+let addIdPanier = []; /* objet - produits */
 
 /* FUNTION CALCUL PRIX TOTAL PANIER PRODUITS 
 Création de la fonction du Prix Total du panier */
