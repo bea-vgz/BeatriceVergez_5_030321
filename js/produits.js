@@ -19,6 +19,7 @@ fetch("http://localhost:3000/api/cameras/" + id) /* id = ObjectID */
 /* API - MESSAGE ERROR */
   .catch(function (error) {
     console.log("Error")
+    alert("Problème serveur - Produit non disponible")
 });
 
 /* PLACEMENT DANS MON CODE HTML - Création de la variable */

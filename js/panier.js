@@ -113,8 +113,7 @@ function deletePanier() {
 /* Condition pour que le message panier vide s'affiche - if/else */
   if (camera_vintage == null) {
   } else {
-    container.remove();
-    localStorage.clear(); /* La méthode clear() vide toutes les clés stockées */
+    localStorage.removeItem('panier');
     alert("Votre panier est sur le point d'être supprimé")
   }
 };
