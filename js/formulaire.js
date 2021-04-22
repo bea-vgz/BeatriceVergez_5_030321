@@ -52,7 +52,7 @@ function SendForm() {
       return false; 
   } else {
       document.getElementById('firstName').innerHTML=`<i class="fas fa-check"></i>`;
-      firstName.style.color = 'green';  
+      firstName.style.color = 'green';
   };
   if (lastName.value == "")                                  
   {   document.getElementById('errorlastName').innerHTML="Veuillez entrer votre prénom";  
