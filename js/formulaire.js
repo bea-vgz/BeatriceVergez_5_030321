@@ -51,7 +51,7 @@ function SendForm() {
       firstName.focus();
       return false; 
   } else {
-      document.getElementById('firstName').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('firstName');
       firstName.style.color = 'green';
   };
   if (lastName.value == "")                                  
@@ -59,7 +59,7 @@ function SendForm() {
       lastName.focus();
       return false; 
   } else {
-      document.getElementById('lastName').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('lastName');
       lastName.style.color = 'green';  
   };
   if (mobile.value == "")                                   
@@ -67,7 +67,7 @@ function SendForm() {
       mobile.focus();
       return false;
   } else {
-      document.getElementById('mobile').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('mobile');
       mobile.style.color = 'green'; 
   };
   if (email.value == "")                                   
@@ -75,7 +75,7 @@ function SendForm() {
       email.focus();
       return false; 
   } else {
-      document.getElementById('email').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('email');
       email.style.color = 'green';  
   };
   if (address.value == "")                                   
@@ -83,7 +83,7 @@ function SendForm() {
       address.focus(); 
       return false; 
   } else {
-      document.getElementById('address').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('address');
       email.style.color = 'green';  
   };
   if (postal.value == "")                                   
@@ -91,7 +91,7 @@ function SendForm() {
       postal.focus();
       return false; 
   } else {
-      document.getElementById('postal').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('postal');
       postal.style.color = 'green';  
   };
   if (city.value == "")                                   
@@ -99,7 +99,7 @@ function SendForm() {
       city.focus();
       return false; 
   } else {
-      document.getElementById('city').innerHTML=`<i class="fas fa-check"></i>`;
+      document.getElementById('city');
       city.style.color = 'green'; 
   };
 }
