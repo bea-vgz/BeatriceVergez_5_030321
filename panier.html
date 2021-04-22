@@ -91,13 +91,13 @@
                 </td>
                 <td>
                   <label for="firstName">Nom<span class="required"> *</span></label><br/>
-                  <input type="text" id="firstName" name="name" class="long" required="required" placeholder="Nom" 
+                  <input type="text" id="firstName" name="name" class="long" required="required" minlength="1" placeholder="Nom" 
                   pattern="[a-zA-Zéèàê-]{1,}"/>
                   <span class="error" id="errorfirstName"></span>
                 </td>
                 <td>
                   <label for="lastName">Prénom<span class="required"> *</span></label><br/>
-                  <input type="text" id="lastName" name="name" class="long" required="required" placeholder="Prénom" 
+                  <input type="text" id="lastName" name="name" class="long" required="required" minlength="1" placeholder="Prénom" 
                   pattern="[a-zA-Zéèàê-]{1,}"/>
                   <span class="error" id="errorlastName"></span>
                 </td>
@@ -111,13 +111,13 @@
               <tr class="col">
                 <td>
                   <label for="email">E-mail<span class="required"> *</span></label><br/>
-                  <input type="email" id="email" name="email" class="long" required="required" placeholder="Email"
+                  <input type="email" id="email" name="email" class="long" required="required" minlength="1" placeholder="Email"
                   pattern="[A-z0-9._-]+[@]{1}[a-zA-Z0-9._-]+[.]{1}[a-zA-Z]{1,}"/>
                   <span class="error" id="erroremail"></span>
                 </td>
                 <td>
                   <label for="address">Adresse<span class="required"> *</span></label><br/>
-                  <input type="text" id="address" name="adresse" class="long" required="required" placeholder="Adresse"/>
+                  <input type="text" id="address" name="adresse" class="long" required="required" minlength="1" placeholder="Adresse"/>
                   <span class="error" id="erroraddress"></span>
                 </td>
                 <td>
@@ -128,7 +128,7 @@
                 </td>
                 <td>
                   <label for="city">Ville<span class="required"> *</span></label><br/>
-                  <input type="text" id="city" name="city" class="long" required="required" placeholder="Ville"
+                  <input type="text" id="city" name="city" class="long" required="required" minlength="1" placeholder="Ville"
                   pattern="[a-zA-Zéèàê-_. ]{1,}"/>
                   <span class="error" id="errorcity"></span>
                 </td>
