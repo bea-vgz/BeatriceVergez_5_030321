@@ -44,8 +44,8 @@ function SendForm() {
   } else {
     alert("Oups ! Une erreur est survenue. Veuillez remplir les champs ci-dessous ou vérifier que votre commande contient un article.")
   };
+
   /* REMPLISSAGE DES CHAMPS - si valeur n'est pas remplie (vide), alors return false avec message erreur, sinon validée si regex respecté */
-  
   if (firstName.value == "")                                  
   {   document.getElementById('errorfirstName').innerHTML="Veuillez entrer votre nom";  
       firstName.focus();
