@@ -279,6 +279,8 @@ textarea {
     color: #D8000C;
     background-color: #FFBABA;
 }
+input:valid {color : rgb(3, 185, 3);}
+input:invalid {color : red;}
 /* Panier */
 .Container_Panier {
     width: 100%;
