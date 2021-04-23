@@ -262,11 +262,8 @@ li a {
     padding: 0px;
     font-weight: bold;
 }
-.form-style {
+.form-style, .required {
     color:#E97400;
-}
-:required {
-    border: 2px dotted #E97400;
 }
 .form-style input[type=text], 
 .form-style input[type=email],

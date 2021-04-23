@@ -51,56 +51,56 @@ function SendForm() {
       firstName.focus();
       return false; 
   } else {
-      document.getElementById('firstName');
-      firstName.style.color = 'green';
+      document.getElementById('errorfirstName').innerHTML="";
+      firstName.style.color = 'black';
   };
   if (lastName.value == "")                                  
   {   document.getElementById('errorlastName').innerHTML="Veuillez entrer votre prénom";  
       lastName.focus();
       return false; 
   } else {
-      document.getElementById('lastName');
-      lastName.style.color = 'green';  
+      document.getElementById('errorlastName');
+      lastName.style.color = 'black';  
   };
   if (mobile.value == "")                                   
   {   document.getElementById('errormobile').innerHTML="Veuillez entrer votre numéro"; 
       mobile.focus();
       return false;
   } else {
-      document.getElementById('mobile');
-      mobile.style.color = 'green'; 
+      document.getElementById('errormobile');
+      mobile.style.color = 'black'; 
   };
   if (email.value == "")                                   
   {   document.getElementById('erroremail').innerHTML="Veuillez entrer votre adresse mail"; 
       email.focus();
       return false; 
   } else {
-      document.getElementById('email');
-      email.style.color = 'green';  
+      document.getElementById('erroremail');
+      email.style.color = 'black';  
   };
   if (address.value == "")                                   
   {   document.getElementById('erroraddress').innerHTML="Veuillez entrer votre adresse"; 
       address.focus(); 
       return false; 
   } else {
-      document.getElementById('address');
-      email.style.color = 'green';  
+      document.getElementById('erroraddress');
+      email.style.color = 'black';  
   };
   if (postal.value == "")                                   
   {   document.getElementById('errorpostal').innerHTML="Veuillez entrer votre code postal"; 
       postal.focus();
       return false; 
   } else {
-      document.getElementById('postal');
-      postal.style.color = 'green';  
+      document.getElementById('errorpostal');
+      postal.style.color = 'black';  
   };
   if (city.value == "")                                   
   {   document.getElementById('errorcity').innerHTML="Veuillez entrer votre ville"; 
       city.focus();
       return false; 
   } else {
-      document.getElementById('city');
-      city.style.color = 'green'; 
+      document.getElementById('errorcity');
+      city.style.color = 'black'; 
   };
 }
 /* Écoute de l'évènement au click + appel fonction SendForm */
