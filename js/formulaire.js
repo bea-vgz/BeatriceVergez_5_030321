@@ -59,7 +59,7 @@ function SendForm() {
       lastName.focus();
       return false; 
   } else {
-      document.getElementById('errorlastName');
+      document.getElementById('errorlastName').innerHTML="";
       lastName.style.color = 'black';  
   };
   if (mobile.value == "")                                   
@@ -67,7 +67,7 @@ function SendForm() {
       mobile.focus();
       return false;
   } else {
-      document.getElementById('errormobile');
+      document.getElementById('errormobile').innerHTML="";
       mobile.style.color = 'black'; 
   };
   if (email.value == "")                                   
@@ -75,7 +75,7 @@ function SendForm() {
       email.focus();
       return false; 
   } else {
-      document.getElementById('erroremail');
+      document.getElementById('erroremail').innerHTML="";
       email.style.color = 'black';  
   };
   if (address.value == "")                                   
@@ -83,7 +83,7 @@ function SendForm() {
       address.focus(); 
       return false; 
   } else {
-      document.getElementById('erroraddress');
+      document.getElementById('erroraddress').innerHTML="";
       email.style.color = 'black';  
   };
   if (postal.value == "")                                   
@@ -91,7 +91,7 @@ function SendForm() {
       postal.focus();
       return false; 
   } else {
-      document.getElementById('errorpostal');
+      document.getElementById('errorpostal').innerHTML="";
       postal.style.color = 'black';  
   };
   if (city.value == "")                                   
@@ -99,7 +99,7 @@ function SendForm() {
       city.focus();
       return false; 
   } else {
-      document.getElementById('errorcity');
+      document.getElementById('errorcity').innerHTML="";
       city.style.color = 'black'; 
   };
 }
